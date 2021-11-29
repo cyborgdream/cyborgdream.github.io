@@ -1,5 +1,7 @@
 # ZOLA.386
 
+~~ This is marimeireles' tech blog
+
 ![ZOLA.386 screenshot](https://github.com/lopes/zola.386/blob/master/screenshot.png?raw=true)
 
 ## [Live demo](https://zola386.netlify.app/)
