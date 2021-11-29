@@ -1,6 +1,6 @@
 +++
 title = "Cyborg soul"
-description = ""
+description = "1/??? going back to the origins of my love for tech and software"
 date = 2021-11-29
 draft = false
 slug = "soul-searching"
