@@ -27,3 +27,6 @@ Never ending list of wanna dos and WIPs
 * [Design patters](https://realpython.com/factory-method-python/), Design Patterns - GoF
 * [Dynamic polymorphism](https://www.youtube.com/watch?v=8c6BAQcYF_E)
 * [JIT for C++](https://blog.quarkslab.com/easyjit-just-in-time-compilation-for-c.html)
+* CRTP
+   * The talk to dynamic cast? Using xvega-lang
+* [Python concurrency](https://realpython.com/python-concurrency/)
