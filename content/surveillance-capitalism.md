@@ -1,6 +1,6 @@
 +++
 title = "My take on: Surveillance capitalism"
-description = "Wrote this to the folks at the university of Paris as part of their admission interview. Very obvious issues with some complicated words warping them."
+description = "Wrote this to the folks at the university of Paris as part of their admission interview. Very obvious issues with some complicated words wraping them."
 date = 2021-05-19
 draft = false
 slug = "surveillance-capitalism"

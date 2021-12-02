@@ -6,8 +6,8 @@ draft = false
 slug = "nurturing-communities"
 
 [taxonomies]
-categories = [""]
-tags = [""]
+categories = ["love"]
+tags = ["collaboration"]
 
 [extra]
 comments = true
