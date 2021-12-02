@@ -29,18 +29,7 @@ Now I'm older and smarter and hopefully I can actually create some magic with my
 
 Here's some ideas for projects I'm interested in tackling in no order of interest:
 
-- Python idiomatic expressions
-- [Functional programming paradigm](https://blog.kalvad.com/haskell-series-part-1/)
-- [Create a web browser in Rust](https://browser.engineering/)
-- [Write a debugger](https://blog.tartanllama.xyz/writing-a-linux-debugger-setup/)
-- [Write a compiler](https://www.cs.cornell.edu/courses/cs6120/2020fa/self-guided/), [1](https://norasandler.com/2017/11/29/Write-a-Compiler.html)
-- Machine Learning things?
-- Security things?
-- Code competition stuff?
-- Art?
-    - Image?
-    - Sound? (Yes babe, please)
-- What about the get away thing in Brazil for hippies?
+These were moved to [here](https://github.com/cyborgdream/cyborgdream.github.io/tree/master#readme) due to the changing nature of this list.
 
 These ideas are so very broad. I'm very interested in starting this "Create a web browser" though.
 
