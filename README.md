@@ -30,3 +30,4 @@ Never ending list of wanna dos and WIPs
 * CRTP
    * The talk to dynamic cast? Using xvega-lang
 * [Python concurrency](https://realpython.com/python-concurrency/)
+* Talk: [hammock driven dev](https://www.youtube.com/watch?v=f84n5oFoZBc&t=1s)
