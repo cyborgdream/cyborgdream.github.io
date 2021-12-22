@@ -31,4 +31,4 @@ Never ending list of wanna dos and WIPs
    * The talk to dynamic cast? Using xvega-lang
 * [Python concurrency](https://realpython.com/python-concurrency/)
 * Talk: [hammock driven dev](https://www.youtube.com/watch?v=f84n5oFoZBc&t=1s)
-* Sentiment analysis easy to use on facebook/instagram/twitter comments
+* Sentiment analysis easy to use on facebook/instagram/twitter comments (could be smth like, select element in page, extract text of this element and runs sentiment analyses)
