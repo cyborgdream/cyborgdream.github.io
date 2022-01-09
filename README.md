@@ -1,4 +1,4 @@
-Never ending list of wanna dos and WIPs
+Never ending list of WIPs & Wishes & Wins
 
 # WIPs
 
@@ -6,10 +6,11 @@ Never ending list of wanna dos and WIPs
 * [Don't go homeless]()
 * [SATAN]()
 * [RPG sound manager]()
-
-# Wanna dos
-
 * Python idiomatic expressions
+    * [If Shakespeare wrote python](https://drive.google.com/file/d/11IPLKpIu5sWGPsvAGmBNpd_kMQkygTVA/view?usp=sharing)
+
+# Wishes
+
 * [Functional programming paradigm](https://blog.kalvad.com/haskell-series-part-1/)
 * [Create a web browser in Rust](https://browser.engineering/)
 * [Write a debugger](https://blog.tartanllama.xyz/writing-a-linux-debugger-setup/)
@@ -17,12 +18,15 @@ Never ending list of wanna dos and WIPs
 * Machine Learning things?
 * Security things?
 * Code competition stuff?
-* Art?
-    * Image?
-    * Sound? (Yes babe, please)
+* Art
+    * Image
+        * Contributing to Snaels and Kiril VR projects
+    * Sound
+        * Contributing to Alejandro's projects
 * What about the get away thing in Brazil for hippies?
 * Any form of functional programming
     * [Rasket](https://docs.racket-lang.org/quick/)
+    * Clojure and Fabi's app
 * [Reverse engineering](https://0x41.cf/reversing/2021/07/21/reversing-x86-and-c-code-for-beginners.html)
 * [Design patters](https://realpython.com/factory-method-python/), Design Patterns - GoF
 * [Dynamic polymorphism](https://www.youtube.com/watch?v=8c6BAQcYF_E)
@@ -30,5 +34,10 @@ Never ending list of wanna dos and WIPs
 * CRTP
    * The talk to dynamic cast? Using xvega-lang
 * [Python concurrency](https://realpython.com/python-concurrency/)
-* Talk: [hammock driven dev](https://www.youtube.com/watch?v=f84n5oFoZBc&t=1s)
 * Sentiment analysis easy to use on facebook/instagram/twitter comments (could be smth like, select element in page, extract text of this element and runs sentiment analyses)
+* Write an app to log my life using Rust, [tauri](https://github.com/tauri-apps/tauri) seems like a good start
+
+# Wins
+
+* Talk: [hammock driven dev](https://www.youtube.com/watch?v=f84n5oFoZBc&t=1s)
+    * [Blogpost]()
