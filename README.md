@@ -2,17 +2,17 @@ Never ending list of WIPs & Wishes & Wins
 
 # WIPs
 
-* [Rust browser]()
 * [Don't go homeless]()
 * [SATAN]()
 * [RPG sound manager]()
 * Python idiomatic expressions
-    * [If Shakespeare wrote python](https://drive.google.com/file/d/11IPLKpIu5sWGPsvAGmBNpd_kMQkygTVA/view?usp=sharing)
+    * [Talk: If Shakespeare wrote python](https://drive.google.com/file/d/11IPLKpIu5sWGPsvAGmBNpd_kMQkygTVA/view?usp=sharing)
+* [Create a web browser in Rust](https://browser.engineering/)
+    * Series of blogposts on Do cyborg dreams of bionic sheep + [code]()
 
 # Wishes
 
 * [Functional programming paradigm](https://blog.kalvad.com/haskell-series-part-1/)
-* [Create a web browser in Rust](https://browser.engineering/)
 * [Write a debugger](https://blog.tartanllama.xyz/writing-a-linux-debugger-setup/)
 * [Write a compiler](https://www.cs.cornell.edu/courses/cs6120/2020fa/self-guided/), [1](https://norasandler.com/2017/11/29/Write-a-Compiler.html)
 * Machine Learning things?
@@ -38,6 +38,3 @@ Never ending list of WIPs & Wishes & Wins
 * Write an app to log my life using Rust, [tauri](https://github.com/tauri-apps/tauri) seems like a good start
 
 # Wins
-
-* Talk: [hammock driven dev](https://www.youtube.com/watch?v=f84n5oFoZBc&t=1s)
-    * [Blogpost]()
