@@ -1,5 +1,5 @@
 +++
-title = ""
+title = "If shakespeare wrote Python"
 description = "6/???"
 date = 2021-12-06
 draft = false
