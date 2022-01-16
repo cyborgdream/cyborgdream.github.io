@@ -3,7 +3,7 @@ title = "The desert break"
 description = "7/???"
 date = 2022-01-15
 draft = false
-slug = ""
+slug = "desert-break"
 
 [taxonomies]
 categories = ["browser"]
