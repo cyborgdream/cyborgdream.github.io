@@ -3,12 +3,11 @@ title = "Jupyter, Fractals and tech talks"
 description = "9/???"
 date = 2022-01-17
 draft = false
-slug = "
-"
+slug = "jupyter-fractals-tech"
 
 [taxonomies]
 categories = [""]
-tags = ["learning", "js", art]
+tags = ["learning", "js", "art"]
 
 [extra]
 comments = true
