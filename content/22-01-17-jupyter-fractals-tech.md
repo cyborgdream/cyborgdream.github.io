@@ -3,7 +3,8 @@ title = "Jupyter, Fractals and tech talks"
 description = "9/???"
 date = 2022-01-17
 draft = false
-slug = "jupyter-fractals-tech"
+slug = "
+"
 
 [taxonomies]
 categories = [""]
