@@ -6,8 +6,8 @@ draft = false
 slug = "internship-mozilla"
 
 [taxonomies]
-categories = ["love"]
-tags = ["activism", "learning"]
+categories = ["activism", "love"]
+tags = ["learning"]
 
 [extra]
 comments = true

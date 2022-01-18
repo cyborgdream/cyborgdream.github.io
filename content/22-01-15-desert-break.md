@@ -6,7 +6,7 @@ draft = false
 slug = "desert-break"
 
 [taxonomies]
-categories = ["browser"]
+categories = ["meta-internet"]
 tags = ["rust", "learning"]
 
 [extra]

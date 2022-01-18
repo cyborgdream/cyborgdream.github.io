@@ -6,7 +6,7 @@ draft = false
 slug = "http2"
 
 [taxonomies]
-categories = ["browser"]
+categories = ["meta-internet"]
 tags = ["performance"]
 
 [extra]

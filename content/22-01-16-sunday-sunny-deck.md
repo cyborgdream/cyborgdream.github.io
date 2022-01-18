@@ -6,7 +6,7 @@ draft = false
 slug = "sunday-sunny-deck"
 
 [taxonomies]
-categories = ["browser"]
+categories = ["meta-internet"]
 tags = ["rust", "learning"]
 
 [extra]
