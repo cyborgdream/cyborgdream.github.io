@@ -6,7 +6,7 @@ draft = false
 slug = "jupyter-fractals-tech"
 
 [taxonomies]
-categories = [""]
+categories = ["journal"]
 tags = ["learning", "js", "art"]
 
 [extra]

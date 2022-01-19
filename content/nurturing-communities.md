@@ -6,7 +6,7 @@ draft = false
 slug = "nurturing-communities"
 
 [taxonomies]
-categories = ["love"]
+categories = ["love", "journal"]
 tags = ["collaboration"]
 
 [extra]

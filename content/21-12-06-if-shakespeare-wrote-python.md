@@ -6,7 +6,7 @@ draft = false
 slug = "if-shakespear-wrote-python"
 
 [taxonomies]
-categories = [""]
+categories = ["journal"]
 tags = ["tutorial"]
 
 [extra]

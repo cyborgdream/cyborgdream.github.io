@@ -6,7 +6,7 @@ draft = false
 slug = "telnet-rust"
 
 [taxonomies]
-categories = ["meta-internet"]
+categories = ["meta-internet", "journal"]
 tags = ["rust", "learning"]
 
 [extra]

@@ -6,7 +6,7 @@ draft = false
 slug = "tricky-rust"
 
 [taxonomies]
-categories = [""]
+categories = ["journal"]
 tags = ["rust", "learning"]
 
 [extra]
