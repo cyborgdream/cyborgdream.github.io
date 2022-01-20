@@ -1,7 +1,7 @@
 +++
 title = "All days are full, but some days are fuller than others"
 description = "11/???"
-date = 2022-19-01
+date = 2022-01-19
 draft = false
 slug = "full-of-cool-things-day"
 
