@@ -2,13 +2,13 @@ Never ending list of WIPs & Wishes & Wins
 
 # WIPs
 
-* [Don't go homeless]()
-* [SATAN]()
-* [RPG sound manager]()
+* [Don't be homeless](https://github.com/marimeireles/dont-be-homeless)
+* [SATAN](https://github.com/marimeireles/SATAN)
+* [openrpgsl](https://github.com/marimeireles/openrpgsl)
 * Python idiomatic expressions
     * [Talk: If Shakespeare wrote python](https://drive.google.com/file/d/11IPLKpIu5sWGPsvAGmBNpd_kMQkygTVA/view?usp=sharing)
 * [Create a web browser in Rust](https://browser.engineering/)
-    * Series of blogposts on Do cyborg dreams of bionic sheep + [code]()
+    * Series of blogposts on Do cyborg dreams of bionic sheep + [code](https://cyborgdream.github.io/tags/rust/)
 
 # Wishes
 
@@ -37,5 +37,6 @@ Never ending list of WIPs & Wishes & Wins
 * Sentiment analysis easy to use on facebook/instagram/twitter comments (could be smth like, select element in page, extract text of this element and runs sentiment analyses)
 * Write an app to log my life using Rust, [tauri](https://github.com/tauri-apps/tauri) seems like a good start
 * Use ipy(by Kevin) to create a collaborative foxdot editing feature, [here](https://github.com/jupyter-server/jupyter_server/pull/624/files) is an example of saving stuff through a yjs websocket, but I don't think this is exactly what I want, but might be useful :)
+* Re-write this [CSS lib](https://github.com/marimeireles/98.css?organization=marimeireles&organization=marimeireles) so I can use it on my personal website
 
 # Wins
