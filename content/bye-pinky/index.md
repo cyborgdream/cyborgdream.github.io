@@ -6,8 +6,8 @@ draft = false
 slug = "bye-pinky"
 
 [taxonomies]
-categories = ["web-dev"]
-tags = ["design"]
+categories = []
+tags = ["design", "web-dev"]
 
 [extra]
 comments = true

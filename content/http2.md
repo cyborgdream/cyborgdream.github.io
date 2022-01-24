@@ -7,7 +7,7 @@ slug = "http2"
 
 [taxonomies]
 categories = ["meta-internet"]
-tags = ["performance"]
+tags = ["performance", "web-dev"]
 
 [extra]
 comments = true
