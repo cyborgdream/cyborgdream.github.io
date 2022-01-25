@@ -1,7 +1,7 @@
 +++
 title = "A crazy cpp lib"
 description = "15/???"
-date = 2022-22-01
+date = 2022-01-22
 draft = false
 slug = "crazy-cpp"
 

@@ -1,9 +1,9 @@
 +++
 title = "Not a coding day"
 description = "14/???"
-date = 2022-22-01
+date = 2022-01-22
 draft = false
-slug = "not-a-coding-day"
+slug = "not-coding"
 
 [taxonomies]
 categories = ["journal"]

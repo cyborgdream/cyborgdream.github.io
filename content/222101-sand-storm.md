@@ -1,7 +1,7 @@
 +++
 title = "Sand storm"
 description = "13/???"
-date = 2022-21-01
+date = 2022-01-21
 draft = false
 slug = "sand-storm"
 

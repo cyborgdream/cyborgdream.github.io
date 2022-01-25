@@ -1,7 +1,7 @@
 +++
 title = "Lisp has only two things?"
 description = "16/???"
-date = 2022-24-01
+date = 2022-01-24
 draft = false
 slug = "lisp-two-things"
 
