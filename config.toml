@@ -10,10 +10,16 @@ compile_sass = true
 generate_rss = true
 build_search_index = true
 
+paginate_by = 5
+sort_by = "date"
+
 taxonomies = [
   {name="categories", rss=true},
   {name="tags", rss=true},
 ]
+
+[markdown]
+highlight_code = true
 
 [extra]
 author = "Mari-chan"
