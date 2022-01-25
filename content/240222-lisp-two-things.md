@@ -1,6 +1,6 @@
 +++
 title = "Lisp has only two things?"
-description = "16/???"
+description = "16/??? Is this confusing or am I confused?"
 date = 2022-01-24
 draft = false
 slug = "lisp-two-things"

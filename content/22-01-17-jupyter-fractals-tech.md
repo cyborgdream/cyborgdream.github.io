@@ -1,6 +1,6 @@
 +++
 title = "Jupyter, Fractals and tech talks"
-description = "9/???"
+description = "9/??? Fractals are so cool!"
 date = 2022-01-17
 draft = false
 slug = "jupyter-fractals-tech"

@@ -1,6 +1,6 @@
 +++
 title = "The dusty shells in the Shrank are still intact"
-description = "10/???"
+description = "10/??? Old porjects die hard"
 date = 2022-01-18
 draft = false
 slug = "dusty-shells"

@@ -1,6 +1,6 @@
 +++
 title = "Sand storm"
-description = "13/???"
+description = "13/??? Nature is much more powerful than Men"
 date = 2022-01-21
 draft = false
 slug = "sand-storm"

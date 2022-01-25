@@ -1,6 +1,6 @@
 +++
 title = "Sunday sunny deck"
-description = "8/???"
+description = "8/??? Little fluffy clouds"
 date = 2022-01-16
 draft = false
 slug = "sunday-sunny-deck"

@@ -1,6 +1,6 @@
 +++
 title = "The desert break"
-description = "7/???"
+description = "7/??? Finally, I've arrived to Mars"
 date = 2022-01-15
 draft = false
 slug = "desert-break"

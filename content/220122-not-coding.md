@@ -1,6 +1,6 @@
 +++
 title = "Not a coding day"
-description = "14/???"
+description = "14/??? Just a lazy Saturday"
 date = 2022-01-22
 draft = false
 slug = "not-coding"

@@ -1,6 +1,6 @@
 +++
 title = "I had fun with CSS"
-description = "12/???"
+description = "12/??? I feel dirty"
 date = 2021-01-20
 draft = false
 slug = "fun-with-css"

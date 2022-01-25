@@ -1,6 +1,6 @@
 +++
 title = "If shakespeare wrote Python"
-description = "6/???"
+description = "6/??? A talk about Pythonic expressions and sometimes pedantism"
 date = 2021-12-06
 draft = false
 slug = "if-shakespear-wrote-python"
