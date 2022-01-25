@@ -6,8 +6,8 @@ draft = false
 slug = "soul-searching"
 
 [taxonomies]
-categories = ["love", "journal"]
-tags = [""]
+categories = ["journal"]
+tags = ["love"]
 
 [extra]
 comments = true

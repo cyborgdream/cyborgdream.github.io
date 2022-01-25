@@ -6,7 +6,7 @@ draft = false
 slug = "wave-poem"
 
 [taxonomies]
-categories = [""]
+categories = ["journal"]
 tags = ["art"]
 
 [extra]

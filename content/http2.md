@@ -6,8 +6,8 @@ draft = false
 slug = "http2"
 
 [taxonomies]
-categories = ["meta-internet"]
-tags = ["performance", "web-dev"]
+categories = ["tutorial"]
+tags = ["performance", "web-dev", "meta-internet"]
 
 [extra]
 comments = true
