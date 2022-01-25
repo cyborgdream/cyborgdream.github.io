@@ -9,6 +9,8 @@ Never ending list of WIPs & Wishes & Wins
     * [Talk: If Shakespeare wrote python](https://drive.google.com/file/d/11IPLKpIu5sWGPsvAGmBNpd_kMQkygTVA/view?usp=sharing)
 * [Create a web browser in Rust](https://browser.engineering/)
     * Series of blogposts on Do cyborg dreams of bionic sheep + [code](https://cyborgdream.github.io/tags/rust/)
+* Code competition stuff
+    * [Lists](https://docs.google.com/presentation/d/16SIWm87WhsKAVZZwOt0EgypDuicOhEznJ3982ueXjzA/edit?usp=sharing)
 
 # Wishes
 
@@ -17,7 +19,6 @@ Never ending list of WIPs & Wishes & Wins
 * [Write a compiler](https://www.cs.cornell.edu/courses/cs6120/2020fa/self-guided/), [1](https://norasandler.com/2017/11/29/Write-a-Compiler.html)
 * Machine Learning things?
 * Security things?
-* Code competition stuff?
 * Art
     * Image
         * Contributing to Snaels and Kiril VR projects
@@ -38,5 +39,6 @@ Never ending list of WIPs & Wishes & Wins
 * Write an app to log my life using Rust, [tauri](https://github.com/tauri-apps/tauri) seems like a good start
 * Use ipy(by Kevin) to create a collaborative foxdot editing feature, [here](https://github.com/jupyter-server/jupyter_server/pull/624/files) is an example of saving stuff through a yjs websocket, but I don't think this is exactly what I want, but might be useful :)
 * Re-write this [CSS lib](https://github.com/marimeireles/98.css?organization=marimeireles&organization=marimeireles) so I can use it on my personal website
+* Create a Header-only C++ library for evaluating logical expressions, that uses <T> and all the good stuff so I can put it into practice into a real life project that needs to be done (there are not many to choose)
 
 # Wins
