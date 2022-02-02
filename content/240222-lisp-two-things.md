@@ -51,7 +51,7 @@ Now I'm confused about what I wrote. I should check the board before the explana
 
 #### Errands
 
-Here's a random thing I thought about: people are constantly full of bullshit about their CC opinions. And I'm not coming from "I'm right they're wrong cause they disagree with me" is more like a "why and the answer doesn't make the least sense". The problem with this notion takes a while to develope because you need general broad understanding of CC things. Not that I have this completely, but I can see it in some things, that I remember a few years ago I'd just acce[t blindly. So, this is interesting.
+Here's a random thing I thought about: people are constantly full of bullshit about their CC opinions. And I'm not coming from "I'm right they're wrong cause they disagre with me" is more like a "why and the answer doesn't make the least sense". The problem with this notion takes a while to develop them because you need general broad understanding of CC things. Not that I have this, but I can see it in some contexts nowadays, to the detriment of "a few years ago me" that would just accept these inputs blindly. So, this is interesting.
 
 Woot! Found the beginning of a solution for a problem at work. This feels nice. :) Now I'm using another lib, way simpler! `exprtk`. I seriously considered writing my own, a generic simple one, but seems like this one is making a very good job. Maybe I'll still do it, to have something small and exclusive to deal with boolean logic. I don't think it's particularly an interesting problem, but I could make it really nice with some templating and stuff, so maybe I can actually learn this for real.
 
