@@ -40,5 +40,12 @@ Never ending list of WIPs & Wishes & Wins
 * Use ipy(by Kevin) to create a collaborative foxdot editing feature, [here](https://github.com/jupyter-server/jupyter_server/pull/624/files) is an example of saving stuff through a yjs websocket, but I don't think this is exactly what I want, but might be useful :)
 * Re-write this [CSS lib](https://github.com/marimeireles/98.css?organization=marimeireles&organization=marimeireles) so I can use it on my personal website
 * Create a Header-only C++ library for evaluating logical expressions, that uses <T> and all the good stuff so I can put it into practice into a real life project that needs to be done (there are not many to choose)
+* C++ Concurrency in Action has a bunch of interesting info in `constexpr` and etc. that I'd like to learn. Appendix A
+* I want to read this: https://aminb.gitbooks.io/rust-for-c/content/borrowed/index.html to finally understand the stuff I keep confusing with C++
+* cpp concurrency in action 4 - Synchronizing concurrent operations
+* cpp concurrency in action 9 - about thread management, thread pools, work queues
+* Learn about system specific C++ tricks? CMAKE tricks? I can't memorize this shit, I just use it on the go. but I think the question is, are there any good practices, design choices, etc. that makes life easier?
+
+
 
 # Wins

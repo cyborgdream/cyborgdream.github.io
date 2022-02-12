@@ -7,7 +7,7 @@ slug = "cpp-classes"
 
 [taxonomies]
 categories = ["journal"]
-tags = ["c++", "rust"]
+tags = ["cpp", "rust", "learning"]
 
 [extra]
 comments = true
@@ -228,7 +228,7 @@ The plan is to go through some of these tomorrow:
 
 - read proxy classes 10.8 on deitel to reinforce the "separate interface from implementation and hide the implementation details" vibe
 
-- memory concepts deitel, there are probably things I forgot about it
+- memory concepts deitel, there are probably things I forgot about
 
 - pointer to void bjarne page 100, I'm curious about intrinsics
 

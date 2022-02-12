@@ -7,7 +7,7 @@ slug = "sand-storm"
 
 [taxonomies]
 categories = ["journal"]
-tags = ["data", "c++"]
+tags = ["data", "cpp"]
 
 [extra]
 comments = true

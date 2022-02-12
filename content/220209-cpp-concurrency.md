@@ -7,7 +7,7 @@ slug = "cpp-concurrency"
 
 [taxonomies]
 categories = ["journal"]
-tags = ["c++"]
+tags = ["cpp", "learning", "performance"]
 
 [extra]
 comments = true
