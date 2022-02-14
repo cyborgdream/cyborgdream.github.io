@@ -6,7 +6,7 @@ draft = false
 slug = "fosdem-2020"
 
 [taxonomies]
-categories = ["love"]
+categories = [""]
 tags = ["rust"]
 
 [extra]

@@ -1,6 +1,6 @@
 +++
 title = "More C++ concurrency"
-description = "20/??? "
+description = "20/??? We're all crazy in different ways, I like C++"
 date = 2022-02-10
 draft = false
 slug = "more-cpp-concurrency"
