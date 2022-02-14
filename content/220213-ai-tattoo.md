@@ -3,7 +3,7 @@ title = "First steps in GAN"
 description = "21/??? Mixing some loves, computer science, tattooing, art!"
 date = 2022-02-13
 draft = false
-slug = ""
+slug = "tattoo-ai"
 
 [taxonomies]
 categories = ["journal"]
