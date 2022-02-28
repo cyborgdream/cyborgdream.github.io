@@ -42,7 +42,9 @@ Never ending list of WIPs & Wishes & Wins
 * cpp concurrency in action 4 - Synchronizing concurrent operations
 * cpp concurrency in action 9 - about thread management, thread pools, work queues
 * Understand the nitty gritties of CMAKE dynamic and static creation
-
+* cool security book Eva pointed out: https://inteltechniques.com/book1.html
+* Structure and Interpretation of Computer Programs book club
+   
 # Wins
    
 * Python idiomatic expressions
