@@ -44,6 +44,7 @@ Never ending list of WIPs & Wishes & Wins
 * Understand the nitty gritties of CMAKE dynamic and static creation
 * cool security book Eva pointed out: https://inteltechniques.com/book1.html
 * Structure and Interpretation of Computer Programs book club
+* [Distributed Systems](https://www.cl.cam.ac.uk/teaching/2021/ConcDisSys/dist-sys-notes.pdf) - With Nick
    
 # Wins
    
