@@ -1,7 +1,7 @@
 +++
 title = "Threading issues in C++"
-description = "25/??? A deeper look in how things can go wrong in C++"
-date = 2022-03-20
+description = "24/??? A deeper look in how things can go wrong in C++"
+date = 2022-03-19
 draft = false
 slug = "threading"
 

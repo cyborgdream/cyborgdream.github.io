@@ -1,6 +1,6 @@
 +++
 title = "Caching on the web"
-description = "24/??? Cashcashcash $$$"
+description = "25/??? Cashcashcash $$$"
 date = 2022-03-20
 draft = false
 slug = "caching"
