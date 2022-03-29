@@ -51,3 +51,5 @@ Never ending list of WIPs & Wishes & Wins
     * [Talk: If Shakespeare wrote python](https://drive.google.com/file/d/11IPLKpIu5sWGPsvAGmBNpd_kMQkygTVA/view?usp=sharing)
 * Re-write this [CSS lib](https://github.com/marimeireles/98.css?organization=marimeireles&organization=marimeireles) so I can use it on my personal website
    * I won't call this a rewrite, but I played with it a little bit and I'm leaving my contribution [here](https://codepen.io/marimeireles/pen/NWaZpbJ) for a future PR. Maybe one day it will be pink and cute, maybe not. I'm not interested in the moment anymore.
+* Code competition stuff
+    * [Lists](https://docs.google.com/presentation/d/16SIWm87WhsKAVZZwOt0EgypDuicOhEznJ3982ueXjzA/edit?usp=sharing)
