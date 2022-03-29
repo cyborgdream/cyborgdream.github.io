@@ -7,8 +7,6 @@ Never ending list of WIPs & Wishes & Wins
 * [openrpgsl](https://github.com/marimeireles/openrpgsl)
 * [Create a web browser in Rust](https://browser.engineering/)
     * Series of blogposts on Do cyborg dreams of bionic sheep + [code](https://cyborgdream.github.io/tags/rust/)
-* Code competition stuff
-    * [Lists](https://docs.google.com/presentation/d/16SIWm87WhsKAVZZwOt0EgypDuicOhEznJ3982ueXjzA/edit?usp=sharing)
 * [Generative tattoo designs with StyleGAN](https://github.com/marimeireles/stylegan3/)
 
 # Wishes
