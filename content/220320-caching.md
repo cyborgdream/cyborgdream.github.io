@@ -7,7 +7,7 @@ slug = "caching"
 
 [taxonomies]
 categories = ["journal"]
-tags = ["learning", "web-dev", "meta-internet"]
+tags = ["learning", "web-dev", "meta-internet", "performance"]
 
 [extra]
 comments = true
