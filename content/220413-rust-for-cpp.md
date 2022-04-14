@@ -1,3 +1,18 @@
++++
+title = "C++ to Rust"
+description = "25/??? I found a book that understands me"
+date = 2022-04-13
+draft = false
+slug = "rust-for-cpp"
+
+[taxonomies]
+categories = ["journal"]
+tags = ["learning", "rust"]
+
+[extra]
+comments = true
++++
+
 I started to read this small book based on a series of blog posts by [Nick Cameron](http://www.ncameron.org/) which seems like a friendly introduction to Rust for people who came from C++.
 
 The first article already gave me some cool insights:
