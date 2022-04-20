@@ -6,8 +6,9 @@ Never ending list of WIPs & Wishes & Wins
 * [SATAN](https://github.com/marimeireles/SATAN)
 * [openrpgsl](https://github.com/marimeireles/openrpgsl)
 * [Create a web browser in Rust](https://github.com/marimeireles/rusty-browser)
-    * Series of blogposts on Do cyborg dreams of bionic sheep + [code](https://cyborgdream.github.io/tags/rust/)
+    * Series of blogposts on Do cyborg dreams of [bionic sheep](https://cyborgdream.github.io/tags/rust/)
 * [Generative tattoo designs with StyleGAN](https://github.com/marimeireles/stylegan3/)
+   * Colab [link](https://colab.research.google.com/drive/1hcUHPLk98zN_V89Z0U5nMUhabPjWk05k)
 
 # Wishes
 
