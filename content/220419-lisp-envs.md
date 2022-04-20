@@ -1,12 +1,12 @@
 +++
 title = "Instaling Lisp environments and not having fun"
-description = "26/??? I found a book that understands me"
+description = "28/??? I found a book that understands me"
 date = 2022-04-19
 draft = false
 slug = "lisp-envs"
 
 [taxonomies]
-categories = ["journal", "tutorial"]
+categories = ["tutorial"]
 tags = ["learning", "lisp"]
 
 [extra]

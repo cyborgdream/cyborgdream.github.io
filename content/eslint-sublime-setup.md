@@ -6,8 +6,8 @@ draft = false
 slug = "eslint-sublime-setup"
 
 [taxonomies]
-categories = ["software-tools"]
-tags = ["tutorial"]
+categories = ["tutorial"]
+tags = ["software-tools"]
 
 [extra]
 comments = true

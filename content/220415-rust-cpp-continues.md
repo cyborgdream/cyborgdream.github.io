@@ -1,6 +1,6 @@
 +++
 title = "C++ to Rust II"
-description = "26/??? Continuing my journey from C++ to Rust"
+description = "27/??? Continuing my journey from C++ to Rust"
 date = 2022-04-15
 draft = false
 slug = "rust-for-cpp-continues"
