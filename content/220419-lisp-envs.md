@@ -1,5 +1,5 @@
 +++
-title = "Instaling Lisp environments and not having fun"
+title = "Installing Lisp environments and not having fun"
 description = "28/??? I found a book that understands me"
 date = 2022-04-19
 draft = false
