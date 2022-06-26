@@ -1,9 +1,9 @@
 +++
-title = ""
-description = "Open source is a crazy Man's dream"
+title = "Open source is a crazy Man's dream"
+description = "Asking some questions about why open source and open science"
 date = 2022-06-26
 draft = false
-slug = "open-source"
+slug = "open-source-crazy-man-dream"
 
 [taxonomies]
 categories = ["research"]
