@@ -45,6 +45,9 @@ Never ending list of WIPs & Wishes & Wins
 * Structure and Interpretation of Computer Programs book club
 * [Distributed Systems](https://www.cl.cam.ac.uk/teaching/2021/ConcDisSys/dist-sys-notes.pdf) - With Nick
 * Everyone is saying this is a very cool algorithm, [Boyer–Moore string-search algorithm](https://en.wikipedia.org/wiki/Boyer%E2%80%93Moore_string-search_algorithm)
+* Progress on Fluent Python
+* Harvard classes
+* [Progress on the ethos of open science](https://cyborgdream.github.io/categories/research/)
    
 # Wins
    
