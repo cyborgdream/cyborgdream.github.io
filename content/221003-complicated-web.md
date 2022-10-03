@@ -1,9 +1,9 @@
 +++
 title = "The not so simple web"
-description = "20/??? We're all crazy in different ways, I like C++"
+description = "Helping people getting unstuck with building static websites"
 date = 2022-02-10
 draft = false
-slug = "more-cpp-concurrency"
+slug = "complicated-web"
 
 [taxonomies]
 categories = ["tutorial"]
@@ -129,7 +129,9 @@ Here's a quick summary of what you'll have to do:
 
 Install hugo in your computer, choose a theme, download it, use `git init` to initialize a github repository, or if you already have a github repository running skip this step. Make your personal changes, run `hugo -D` to generate the files that will run in your browser. Run `git add $files_you_produced`, `git commit -m "your message"` your changes and finally `git push`.
 
-That's it!
+As an extra step from the Jekyll system though is that you'll have to setup Github Actions, but don't worries, it's as simple as copying/pasting a new file into your repository. [This](https://gohugo.io/hosting-and-deployment/hosting-on-github/#build-hugo-with-github-action) file should be enough. Check the rest of the page if you're stuck in some other step with Github, might be helpful!
+
+Okay, so that's it!
 
 If you have any questions about how to build your website and you're part of WocCodes cohort, you know how to find me!
 If you just found this and need help, send me an email, I might be able to reply! ^-^
