@@ -7,7 +7,7 @@ slug = "if-shakespear-wrote-python"
 
 [taxonomies]
 categories = ["journal"]
-tags = ["tutorial", "python"]
+tags = ["python"]
 
 [extra]
 comments = true
