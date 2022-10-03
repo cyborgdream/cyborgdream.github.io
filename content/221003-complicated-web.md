@@ -1,7 +1,7 @@
 +++
 title = "The not so simple web"
 description = "Helping people getting unstuck with building static websites"
-date = 2022-02-10
+date = 2022-10-03
 draft = false
 slug = "complicated-web"
 
