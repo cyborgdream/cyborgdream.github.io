@@ -40,6 +40,6 @@ And then!
 We start all over again. And do different things every day, even the things that are the same feel different.
 It's never consuming, never tiring, never less, never more.
 
-I guess this post is both a written self-reflection of what I noticed in the last few months about who I am professionally and also an invitation for fellow software engineers to experiment with pursuing their passions alongside with software. The times I pursued my dreams intensily (moved countries, changed my life style completely) is when I feel most happy and accomplished with my software work. Even if when completely unrelated with the dreams, like now.
+I guess this post is both a written self-reflection of what I noticed in the last few months about who I am professionally and also an invitation for fellow software engineers to experiment with pursuing their passions alongside with software. The times I pursued my dreams intensily (moved countries, changed my life style completely) is when I feel most happy and accomplished with my software work. Even when it's completely unrelated with the dreams, like now.
 
 Wishing you all love and brightness for a happy life. Spaciousness and peace to pursue your dreams.
