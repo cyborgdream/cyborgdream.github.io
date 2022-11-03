@@ -1,6 +1,6 @@
 +++
-title = "Software engineering is gardening"
-description = "The development of my relationship with my job"
+title = "Software Gardening"
+description = "The development of my relationship with my work"
 date = 2022-11-01
 draft = false
 slug = "soft-is-garden"
