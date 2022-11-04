@@ -1,4 +1,5 @@
 Never ending list of WIPs & Wishes & Wins
+I wrote about the original motivation of this list [here](https://cyborgdream.github.io/soul-searching/).
 
 # WIPs
 
@@ -9,6 +10,7 @@ Never ending list of WIPs & Wishes & Wins
     * Series of blogposts on Do cyborg dreams of [bionic sheep](https://cyborgdream.github.io/tags/rust/)
 * [Generative tattoo designs with StyleGAN](https://github.com/marimeireles/stylegan3/)
    * Colab [link](https://colab.research.google.com/drive/1hcUHPLk98zN_V89Z0U5nMUhabPjWk05k)
+* writing the log app with Morgan!
 
 # Wishes
 
@@ -26,7 +28,10 @@ Never ending list of WIPs & Wishes & Wins
     * [Rasket](https://docs.racket-lang.org/quick/)
     * Clojure and Fabi's app
 * [Reverse engineering](https://0x41.cf/reversing/2021/07/21/reversing-x86-and-c-code-for-beginners.html)
-* [Design patterns](https://realpython.com/factory-method-python/), Design Patterns - GoF
+* [Design patterns]
+   - https://realpython.com/factory-method-python/
+   - Design Patterns - GoF
+   - [event sourcing](https://microservices.io/patterns/data/event-sourcing.html)
 * [Dynamic polymorphism](https://www.youtube.com/watch?v=8c6BAQcYF_E)
 * [JIT for C++](https://blog.quarkslab.com/easyjit-just-in-time-compilation-for-c.html)
 * CRTP
@@ -37,7 +42,6 @@ Never ending list of WIPs & Wishes & Wins
 * Use ipy(by Kevin) to create a collaborative foxdot editing feature, [here](https://github.com/jupyter-server/jupyter_server/pull/624/files) is an example of saving stuff through a yjs websocket, but I don't think this is exactly what I want, but might be useful :)
 * Create a Header-only C++ library for evaluating logical expressions, that uses <T> and all the good stuff so I can put it into practice into a real life project that needs to be done (there are not many to choose)
 * C++ Concurrency in Action has a bunch of interesting info in `constexpr` and etc. that I'd like to learn. Appendix A
-* I want to read this: https://aminb.gitbooks.io/rust-for-c/content/borrowed/index.html to finally understand the stuff I keep confusing with C++
 * cpp concurrency in action 4 - Synchronizing concurrent operations
 * cpp concurrency in action 9 - about thread management, thread pools, work queues
 * Understand the nitty gritties of CMAKE dynamic and static creation
@@ -46,8 +50,9 @@ Never ending list of WIPs & Wishes & Wins
 * [Distributed Systems](https://www.cl.cam.ac.uk/teaching/2021/ConcDisSys/dist-sys-notes.pdf) - With Nick
 * Everyone is saying this is a very cool algorithm, [Boyer–Moore string-search algorithm](https://en.wikipedia.org/wiki/Boyer%E2%80%93Moore_string-search_algorithm)
 * Progress on Fluent Python
-* Harvard classes
-* [Progress on the ethos of open science](https://cyborgdream.github.io/categories/research/)
+* pyscript + p5js
+* pyscript + ipy
+* contribute back to polis
    
 # Wins
    
@@ -57,3 +62,7 @@ Never ending list of WIPs & Wishes & Wins
    * I won't call this a rewrite, but I played with it a little bit and I'm leaving my contribution [here](https://codepen.io/marimeireles/pen/NWaZpbJ) for a future PR. Maybe one day it will be pink and cute, maybe not. I'm not interested in the moment anymore.
 * Code competition stuff
     * [Lists](https://docs.google.com/presentation/d/16SIWm87WhsKAVZZwOt0EgypDuicOhEznJ3982ueXjzA/edit?usp=sharing)
+* [Harvard classes](https://github.com/LSSTC-DSFP/LSSTC-DSFP-Sessions)
+* [NASA's ethos of open science](https://github.com/learnopenscience/TOPS-OC1-ethos)
+* I want to read this: https://aminb.gitbooks.io/rust-for-c/content/borrowed/index.html to finally understand the stuff I keep confusing with C++
+   * I made quite a few progress on this [here](https://cyborgdream.github.io/tags/rust/)
