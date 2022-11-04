@@ -13,17 +13,27 @@ tags = ["love"]
 comments = true
 +++
 
-Software engineering was always about love to me.
+In the beggining there were computers.
 
-I grew up in a very technological house hold. I used to live on a farm when I was a kid, and we were very poor. But my father came from a rich family, he was a very culturally rich person and we always had computers at home. I was very furtunate because of that. After 14 years, we eventually overcame poverty thanks to left wing politics and he became a software engineer. But even before he joins university and finishes his degree I knew I wanted to work with something related with computers.
+They were always a synonim of love to me. They were the safe shores that'd comfort me after a tough day in school. They were the attention and love of my dad and how we connected the best.
 
-I used to built "robots" out of stuff I'd find around the house and by magic hope they'd come to life and interact with me. I always wanted to be an inventor, like in the cartoons, a crazy scientist of sorts. I think being a software engineer is pretty close to that.
+I was born in a farm and even though my core family was very poor, my extended family was not. That gave me plenty of benefits to enjoy a culturally rich life permeated with technology since my infancy. (Which was very very rare for Brazil countryside by the end of 90's, beginning of 20s).
 
->(Ok, to be honest, I wanted to be the leader of a wolf pack for quite a while, but capitalism convinced me that was a bad idea).
+As a kid, I wanted to be an invetor, or a crazy scientist, like the ones I'd see in the cartoons. I used to built "robots" out of stuff I'd find around the house and hope that through the right encantation the pieces I put together would make my creature to come to life and interact with me. I think developing software is pretty close to that.
 
-When the time to university came I was pushed in to an Electrical Engineering degree I ended up hating. That was 6 years ago. I left my parents house and had to transform myself into a real adult from one day to the other, feeling the soul crushing pressure of capitalism over poor people, while studying in an abusive environment that couldn't care less for my personal difficulties and would treat me the same as my super rich pampered peers. That and some other factors sank me on a deep depression that I think I just truly let go off after a while having moved in to Berlin.
+Okay, to be fair, I also wanted to be the leader of a wolf pack for quite a while, but when I turned 14 and I realized I should start thinking about my career I was convinced it wasn't a great idea.
 
-The thing is, for 6 years I have been pushing through life so hard and now I'm a bit tired from it. I took a month off break of being a software engineer, but I'm longing to come back to it. However, I don't want to feel bound to work for now, so I start with this post a series of posts that will go for an indefinite period of time (as long as I'm not working, very likely) and on them I intend to reconnect with my love for coding, tech and software. Going back to simpler times when I was just building robots out of junk and expecting that magic would make them alive!
+When the time to university came I didn't choose to study computer science (even though I could have!). I was accepted in a really good university in Brazil and could choose between any of the most prestigious courses, my family not so gently nudged me into choosing electrical engineering. I thought I could build robots there and learn software development but that didn't happen. That was 6 years ago.
+
+It was very troubled times in my household and I was going through some deep personal and transformative experiences at the time. I decided to leave my parents house and live by myself.
+
+Little did I know what I was getting into. Suddenly there I was, all by myself for the first time in my life. I had a weird contractor job on Facebook that could kick me out at any time (and they eventually did), no money saved and a bunch of confusing dreams and hopes. I had to transform myself into an adult but I didn't have many of the safety structures that a lot of the people around me had. I've been through - what I can now look back and say - some of the most difficult years of my life. Feeling the soul crushing pressure of capitalism surviving in a poor unequal society, studying in an abusive environment that couldn't care less for my personal difficulties, fighting a system that homogeonized me as a rich, privileged kid.
+
+This storm sank me in deep depression. I fought it for many years. And I won. I quit my university and it was the most liberating impactful thing I ever did in my life. I'm so grateful for the people I met and the experiences I lived in that place but also deeply hurt by its toxity and animosity. I became a software engineer. I got a cool job. I did it. But I did it for survival reasons, I had lost my connection with the software engineering magic, of trying different encantations to make the robot alive. I was grinding, I was making money, I was studying hard things I didn't care about because that's what my employers wanted from me.
+
+For 6 years I have been pushing through life so hard and I'm finally very tired of it. I took a few months off from work thanks to the amazing German health care system. I said, I'm tired, and it was fine, I could actually take a break. Now I feel much better and I'm longing to get back to it.
+
+However, I don't want to feel bound to work for now, so I start with this post a series of posts that will go for an indefinite period of time (as long as I'm not working, very likely) and on them I intend to reconnect with my love for coding, tech and software. Going back to simpler times when I was just building robots out of junk and expecting that magic would make them alive.
 
 Now I'm older and smarter and hopefully I can actually create some magic with my opensourcerer fingers!
 
