@@ -5,6 +5,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: address err "git config --global --add safe.directory /github/workspace"
+        git config --global --add safe.directory '*'
       - name: checkout
         uses: actions/checkout@v2
       - name: build_and_deploy
