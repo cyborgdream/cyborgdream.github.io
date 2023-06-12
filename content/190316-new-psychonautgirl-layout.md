@@ -6,7 +6,7 @@ draft = false
 slug = "new-psychonautgirl-design"
 
 [taxonomies]
-categories = [""]
+categories = ["journal"]
 tags = ["design"]
 
 [extra]
