@@ -1,6 +1,6 @@
 +++
 title = "The Inner Game of Tennis"
-description = "The development of my relationship with my work"
+description = "Learning about self-realization and relaxing into flowness"
 date = 2023-06-12
 draft = false
 slug = "game-tennis"
