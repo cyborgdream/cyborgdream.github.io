@@ -3,7 +3,7 @@ base_url = "https://cyborgdream.github.io"
 
 default_language = "en"
 title = "Do cyborgs dream of bionic sheep?"
-description = "A Rotkäppchen exploring the cyber universe"
+#description = "A Rotkäppchen exploring the cyber universe"
 
 highlight_code = true
 compile_sass = true
