@@ -3,7 +3,7 @@ base_url = "https://cyborgdream.github.io"
 
 default_language = "en"
 title = "Do cyborgs dream of bionic sheep?"
-#description = "A Rotkäppchen exploration of the cyber universe"
+description = "A Rotkäppchen exploring the cyber universe"
 
 highlight_code = true
 compile_sass = true
@@ -23,7 +23,7 @@ highlight_code = true
 
 [extra]
 author = "Mari-chan"
-year = "2021"
+year = "2023"
 
 keywords = "zola, theme, retro, hacking"
 theme_color = "black"
