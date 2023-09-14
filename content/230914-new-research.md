@@ -26,7 +26,7 @@ Currently I'm looking into three different little research ideas:
 
 I argue that AI should be controlled either because AI is a driving force for [Zerstörung](https://en.wikipedia.org/wiki/Creative_destruction) or because AIs will eventually evolve into an existential menace to human kind. I'm not even going as far as to say that [AGI](https://en.wikipedia.org/wiki/Artificial_general_intelligence) is a certain development; I believe it's possible to do a lot of harm with AI even without it achieving this level of intelligence.
 
-In order to control the AI we need to understand it, and so far, even though we have been making steady[1][2] progress in the area of interpretability, we have a long way to go.
+In order to control the AI we need to understand it, and so far, even though we have been making steady progress[1][2] in the area of interpretability, we have a long way to go.
 
 There are many different fronts to explore in the efforts to understand AI. The one I'd like to focus on is working towards simple and understandable models.
 
