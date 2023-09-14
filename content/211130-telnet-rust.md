@@ -7,7 +7,7 @@ slug = "telnet-rust"
 
 [taxonomies]
 categories = ["journal"]
-tags = ["rust", "learning", "meta-internet"]
+tags = ["rust", "learning", "web-dev"]
 
 [extra]
 comments = true

@@ -7,7 +7,7 @@ slug = "tattoo-ai"
 
 [taxonomies]
 categories = ["journal"]
-tags = ["ai", "python", "art", "tattoo", "love"]
+tags = ["ai", "python", "art", "love"]
 
 [extra]
 comments = true

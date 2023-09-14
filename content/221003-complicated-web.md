@@ -7,7 +7,7 @@ slug = "complicated-web"
 
 [taxonomies]
 categories = ["tutorial"]
-tags = ["meta-internet", "web-dev"]
+tags = ["web-dev"]
 
 [extra]
 comments = true

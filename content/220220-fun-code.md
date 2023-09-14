@@ -7,7 +7,7 @@ slug = "fun-code"
 
 [taxonomies]
 categories = ["journal"]
-tags = ["ai", "python", "art", "tattoo", "community", "web-dev"]
+tags = ["ai", "python", "art", "community", "web-dev"]
 
 [extra]
 comments = true
