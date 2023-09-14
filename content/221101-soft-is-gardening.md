@@ -17,7 +17,7 @@ This year and the last I saw my relationship with work transform itself.
 
 To be fair, it wasn't only a change in my perception of work, it was also an economic shift that allowed my mind to float in much calmer waters.
 
-I've always had no money at all, and it's been a bit more than a year since I finally have some money saved. It does wonders to your state of mind. Because I felt so safe I could join the [coolest adventure](wireless-hippie.github.io/martian/) I've ever boarded in my life. I could take time and choose a job that really resonated with me. And I had the space to realize that I'm no longer stumbling around in the soup of bits and bytes, now I can actually arrange them and tame them to my will (most of the time).
+I've always had no money at all, and it's been a bit more than a year since I finally have some money saved. It does wonders to your state of mind. Because I felt so safe I could join the [coolest adventure](https://wireless-hippie.github.io/martian/) I've ever boarded in my life. I could take time and choose a job that really resonated with me. And I had the space to realize that I'm no longer stumbling around in the soup of bits and bytes, now I can actually arrange them and tame them to my will (most of the time).
 
 Steping back and realizing how my skills developed made me feel much more relaxed about my work. It wasn't so much about a steep gain of knowledge, but about the understanding that I don't need to struggle anymore. Most of my anxiety crises related to my self-worth connected to my work as a software engineer are gone. No more stressful afternoons staring at the blank walls that'd echo my thoughts of emptiness and inadequacy, nor more long coding nights filled with guilt and punishment for not being able to finish or understand enough during the working hours, no more struggle with impostor syndrome, no more fear of asking questions.
 
@@ -25,7 +25,7 @@ With this new gained perspective I also gained courage to look people in the eye
 
 It also gave me peace to pursue other passions. Currently, I'm enjoying two, alongside my software development work I'm also working with the land (related to my interest in permaculture and Earth's regeneration) and understanding and building better governance solutions (this relates to my love for open source and my intent to make it more scallable, reliable and fair). Check my [main website](https://psychonautgirl.space), if you're curious.
 
-I'm at the [TDF community](traditionaldreamfactory.com) project working with the earth, they're a sociocracy commune experimenting with new forms of governance.
+I'm at the [TDF community](https://traditionaldreamfactory.com) project working with the earth, they're a sociocracy commune experimenting with new forms of governance.
 
 Here I meditate and do yoga.
 I plant trees and vegetables, I feed the cats, clean, cook, fix the gray water system, I have insightful thought-provoking conversations and then I sit and I code for a while. I stop for a communal lunch and smile at people I'm slowly coming to love.
