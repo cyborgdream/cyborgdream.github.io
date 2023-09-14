@@ -13,7 +13,7 @@ tags = ["ai"]
 comments = true
 +++
 
-I've joined a DAO cooperative called RADAR as their "experimentalist."
+I've joined a research cooperative called RADAR as an "experimentalist."
 
 RADAR is a collective of non-traditional researchers who are looking into ways of democratizing research. It's a diverse mix of people who want to produce content that is aesthetic, informative, and that expresses diverse and creative opinions. My work as an experimentalist entails developing software experiments that enable and empower the work of my fellow researchers.
 
