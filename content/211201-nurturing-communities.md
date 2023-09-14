@@ -7,7 +7,7 @@ slug = "nurturing-communities"
 
 [taxonomies]
 categories = ["journal"]
-tags = ["collaboration"]
+tags = ["community"]
 
 [extra]
 comments = true

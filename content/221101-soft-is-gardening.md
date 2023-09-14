@@ -7,7 +7,7 @@ slug = "soft-is-garden"
 
 [taxonomies]
 categories = ["journal"]
-tags = ["community", "learning", "love", "anticapitalism"]
+tags = ["community", "learning", "love", "counter-culture"]
 
 [extra]
 comments = true
