@@ -7,7 +7,7 @@ slug = "surveillance-capitalism"
 
 [taxonomies]
 categories = ["activism"]
-tags = ["privacy", "anticapitalism"]
+tags = ["privacy", "counter-culture"]
 
 [extra]
 comments = true
