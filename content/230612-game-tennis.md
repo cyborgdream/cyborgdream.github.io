@@ -7,7 +7,7 @@ slug = "game-tennis"
 
 [taxonomies]
 categories = ["journal"]
-tags = ["book", "learning"]
+tags = ["books", "learning"]
 
 [extra]
 comments = true
