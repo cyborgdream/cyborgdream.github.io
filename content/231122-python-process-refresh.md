@@ -1,12 +1,12 @@
 +++
 title = "Python's processes, threading and memory"
-description = "Little nuggets on me revisiting the topic to stay sharp"
+description = "Little nuggets on memory, parallelization, asyncio and multithreading in Python"
 date = 2023-11-22
 draft = false
 slug = "python-process-refresh"
 
 [taxonomies]
-categories = [""]
+categories = ["tutorial"]
 tags = ["python", "performance"]
 
 [extra]
