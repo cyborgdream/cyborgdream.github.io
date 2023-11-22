@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/Blog">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <link rel="stylesheet" href="https://cyborgdream.github.io/site.css">
+  <title>Do cyborgs dream of bionic sheep? - How to create mixed build packages for conda</title>
+  
+  
+
+  <meta name="description" itemprop="about" content="">
+  <meta name="keywords" itemprop="keywords" content="zola, theme, retro, hacking">
+  <meta name="author" itemprop="author" content="Mari-chan">
+  <meta itemprop="headline" content="Do cyborgs dream of bionic sheep?">
+  <meta itemprop="copyrightYear" content="2023">
+
+  <link rel="icon" href="https://cyborgdream.github.io/images/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="https://cyborgdream.github.io/images/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="https://cyborgdream.github.io/images/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="https://cyborgdream.github.io/images/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://cyborgdream.github.io/images/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="https://cyborgdream.github.io/images/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="https://cyborgdream.github.io/images/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="https://cyborgdream.github.io/images/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://cyborgdream.github.io/images/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://cyborgdream.github.io/images/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="https://cyborgdream.github.io/images/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://cyborgdream.github.io/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="https://cyborgdream.github.io/images/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://cyborgdream.github.io/images/favicon-16x16.png">
+  <link rel="manifest" href="https://cyborgdream.github.io/images/manifest.json">
+  <meta name="msapplication-TileColor" content="black">
+  <meta name="msapplication-TileImage" content="https://cyborgdream.github.io/images/ms-icon-144x144.png">
+  <meta name="theme-color" content="black">
+
+  <meta property="og:title" content="Do cyborgs dream of bionic sheep? - How to create mixed build packages for conda">
+  <meta property="og:description" content="C++, Python and Pybind11 on conda-forge">
+  <meta property="og:url" content="https:&#x2F;&#x2F;cyborgdream.github.io/mixed-builds">
+  <meta property="og:site_name" content="Do cyborgs dream of bionic sheep?">
+  
+  <meta property="og:image" content="">
+  
+  <meta name="twitter:card" content="summary">
+  
+  <meta name="twitter:site" content="mari_meir">
+  <meta name="twitter:creator" content="mari_meir">
+  <meta name="twitter:image:alt" content="Do cyborgs dream of bionic sheep?">
+  
+
+  
+</head>
+
+<body data-spy="scroll" data-target=".bs-docs-sidebar">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"></button>
+            <a class="brand" href="https:&#x2F;&#x2F;cyborgdream.github.io">Do cyborgs dream of bionic sheep?</a>
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+                
+                
+                <li class="">
+                  <a href="https:&#x2F;&#x2F;cyborgdream.github.io/"><span>Home</span></a>
+                </li>
+                
+                <li class="">
+                  <a href="https:&#x2F;&#x2F;cyborgdream.github.io/categories"><span>Categories</span></a>
+                </li>
+                
+                <li class="">
+                  <a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags"><span>Tags</span></a>
+                </li>
+                
+                <li class="">
+                  <a href="https:&#x2F;&#x2F;cyborgdream.github.io/about"><span>About</span></a>
+                </li>
+                
+                
+              </ul>
+            </div>
+        </div>
+    </div>
+  </nav>
+
+  <div class="container navmargin">
+    <header class="jumbotron subhead" id="overview">
+      
+<p class="lead">
+  <span>&gt;&gt;</span>
+  <a href="https:&#x2F;&#x2F;cyborgdream.github.io">Home</a>
+  
+    <span class="divider">/</span>
+    <a class="category" href="https://cyborgdream.github.io/categories/tutorial/">tutorial</a>
+    <span class="divider">/</span>
+      
+        <a href="https://cyborgdream.github.io/tags/python/">python</a>,
+      
+        <a href="https://cyborgdream.github.io/tags/cpp/">cpp</a>,
+      
+        <a href="https://cyborgdream.github.io/tags/software-tools/">software-tools</a>
+      
+  
+</p>
+
+      
+<div class="page-header">
+  <h1>How to create mixed build packages for conda</h1>
+</div>
+
+      
+<p class="text-right">
+  <span class="label label-success">
+    &becaus;
+    
+      Mari-chan
+    
+  </span>
+  <span class="label label-success">&there4; 2023-11-22</span>
+  <span class="label label-success">&infin; 3'</span>
+</p>
+
+    </header>
+    
+    <div class="row-fluid">
+
+      <div class="span9 bs-docs-sidebar">
+      
+<p>This is part of a series where I write down things I know or I've learned while trying to keep myself sharp in various subjects that I don't use so often anymore.</p>
+<p>The simplest example on how to build a Python package using PyBind11 that I could come up with is the following:</p>
+<h4 id="step-1-writing-the-c-code">Step 1: Writing the C++ Code</h4>
+<p>First, we write our C++ function. We'll create a file named <code>hello.cpp</code>:</p>
+<pre data-lang="cpp" style="background-color:#2b303b;color:#c0c5ce;" class="language-cpp "><code class="language-cpp" data-lang="cpp"><span style="color:#b48ead;">#include </span><span>&lt;</span><span style="color:#a3be8c;">iostream</span><span>&gt;void say_hello(const char* name) {
+</span><span>    std::cout &lt;&lt; &quot;</span><span style="color:#a3be8c;">Hello, </span><span>&quot; &lt;&lt; name &lt;&lt; &quot;</span><span style="color:#a3be8c;">!</span><span>&quot; &lt;&lt; std::endl;
+</span><span style="background-color:#bf616a;color:#2b303b;">}</span><span>
+</span></code></pre>
+<h4 id="step-2-creating-c-python-bindings">Step 2: Creating C++ Python Bindings</h4>
+<p>Next, we'll use PyBind11 to create Python bindings for our C++ code. We will create a file named <code>pybind_wrapper.cpp</code>:</p>
+<pre data-lang="cpp" style="background-color:#2b303b;color:#c0c5ce;" class="language-cpp "><code class="language-cpp" data-lang="cpp"><span style="color:#b48ead;">#include </span><span>&lt;</span><span style="color:#a3be8c;">pybind11/pybind11.h</span><span>&gt;
+</span><span style="color:#b48ead;">#include </span><span>&quot;</span><span style="color:#a3be8c;">hello.cpp</span><span>&quot;
+</span><span style="color:#b48ead;">namespace </span><span>py = pybind11;
+</span><span>
+</span><span style="color:#bf616a;">PYBIND11_MODULE</span><span>(hello_ext, m) {
+</span><span>    m.</span><span style="color:#bf616a;">def</span><span>(&quot;</span><span style="color:#a3be8c;">say_hello</span><span>&quot;, &amp;say_hello, &quot;</span><span style="color:#a3be8c;">A function that says hello</span><span>&quot;);
+</span><span>}
+</span></code></pre>
+<p>For this to work, you'll need to have PyBind11 installed. It can be included in your project as a submodule or installed globally.</p>
+<h4 id="step-3-writing-the-setup-py-file">Step 3: Writing the <code>setup.py</code> File</h4>
+<p>Now, we need to write <code>setup.py</code>, which will build our extension module using setuptools:</p>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#b48ead;">from </span><span>setuptools </span><span style="color:#b48ead;">import </span><span>setup, Extension
+</span><span style="color:#b48ead;">from </span><span>pybind11.setup_helpers </span><span style="color:#b48ead;">import </span><span>Pybind11Extension, build_ext
+</span><span>
+</span><span>ext_modules = [
+</span><span>    </span><span style="color:#bf616a;">Pybind11Extension</span><span>(&quot;</span><span style="color:#a3be8c;">hello_ext</span><span>&quot;,
+</span><span>                      [&quot;</span><span style="color:#a3be8c;">pybind_wrapper.cpp</span><span>&quot;],
+</span><span>                      </span><span style="color:#65737e;"># Example: passing in the version of the Python extension
+</span><span>                      </span><span style="color:#bf616a;">define_macros </span><span>= [(&#39;</span><span style="color:#a3be8c;">VERSION_INFO</span><span>&#39;, &#39;</span><span style="color:#a3be8c;">&quot;0.0.1&quot;</span><span>&#39;)],
+</span><span>                     ),
+</span><span>]
+</span><span>
+</span><span style="color:#bf616a;">setup</span><span>(
+</span><span>    </span><span style="color:#bf616a;">name</span><span>=&quot;</span><span style="color:#a3be8c;">hello-package</span><span>&quot;,
+</span><span>    </span><span style="color:#bf616a;">version</span><span>=&quot;</span><span style="color:#a3be8c;">0.0.1</span><span>&quot;,
+</span><span>    </span><span style="color:#bf616a;">author</span><span>=&quot;</span><span style="color:#a3be8c;">Mari</span><span>&quot;,
+</span><span>    </span><span style="color:#bf616a;">description</span><span>=&quot;</span><span style="color:#a3be8c;">A test package with a C++ extension</span><span>&quot;,
+</span><span>    </span><span style="color:#bf616a;">ext_modules</span><span>=ext_modules,
+</span><span>    </span><span style="color:#bf616a;">cmdclass</span><span>={&quot;</span><span style="color:#a3be8c;">build_ext</span><span>&quot;: build_ext},
+</span><span>)
+</span></code></pre>
+<h4 id="step-4-building-the-wheel">Step 4: Building the Wheel</h4>
+<p>To build the wheel, you'll need to install the <code>wheel</code> package if you haven't already:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>pip install wheel
+</span></code></pre>
+<p>Then, you run:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>python setup.py bdist_wheel
+</span></code></pre>
+<p>This will compile the C++ code and create a <code>.whl</code> file in the <code>dist</code> directory.</p>
+<h4 id="step-5-creating-a-conda-package">Step 5: Creating a Conda Package</h4>
+<p>To create a Conda package, you'll need to create a <code>meta.yaml</code> file that Conda-build can use to build your package. The <code>meta.yaml</code> file might look something like this:</p>
+<pre data-lang="yaml" style="background-color:#2b303b;color:#c0c5ce;" class="language-yaml "><code class="language-yaml" data-lang="yaml"><span style="color:#bf616a;">package</span><span>:
+</span><span>  </span><span style="color:#bf616a;">name</span><span>: </span><span style="color:#a3be8c;">hello-package
+</span><span>  </span><span style="color:#bf616a;">version</span><span>: &quot;</span><span style="color:#a3be8c;">0.0.1</span><span>&quot;
+</span><span>
+</span><span style="color:#bf616a;">source</span><span>:
+</span><span>  </span><span style="color:#bf616a;">path</span><span>: </span><span style="color:#d08770;">.
+</span><span>
+</span><span style="color:#bf616a;">requirements</span><span>:
+</span><span>  </span><span style="color:#bf616a;">build</span><span>:
+</span><span>    - {{ </span><span style="color:#a3be8c;">compiler(&#39;c&#39;) </span><span>}}
+</span><span>    - {{ </span><span style="color:#a3be8c;">compiler(&#39;cxx&#39;) </span><span>}}
+</span><span>    - </span><span style="color:#a3be8c;">python
+</span><span>    - </span><span style="color:#a3be8c;">setuptools
+</span><span>    - </span><span style="color:#a3be8c;">pybind11
+</span><span>
+</span><span style="color:#bf616a;">test</span><span>:
+</span><span>  </span><span style="color:#bf616a;">imports</span><span>:
+</span><span>    - </span><span style="color:#a3be8c;">hello_ext
+</span><span>
+</span><span style="color:#bf616a;">about</span><span>:
+</span><span>  </span><span style="color:#bf616a;">home</span><span>: &quot;</span><span style="color:#a3be8c;">The URL to the homepage</span><span>&quot;
+</span><span>  </span><span style="color:#bf616a;">license</span><span>: </span><span style="color:#a3be8c;">MIT
+</span><span>  </span><span style="color:#bf616a;">summary</span><span>: &quot;</span><span style="color:#a3be8c;">A simple example package with C++ extension
+</span></code></pre>
+<p>To build the Conda package, you'll use the <code>conda-build</code> command:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>conda build .
+</span></code></pre>
+<p>This will create a Conda package that you can then upload to Anaconda Cloud or install directly.</p>
+<p>To run it:</p>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span>pip install /path/to/dist/hello_package-</span><span style="color:#d08770;">0.0.1</span><span>-py3-none-</span><span style="color:#96b5b4;">any</span><span>.whl
+</span></code></pre>
+<p>And to use it:</p>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#b48ead;">import </span><span>hello_ext
+</span><span>
+</span><span>hello_ext.</span><span style="color:#bf616a;">say_hello</span><span>(&quot;</span><span style="color:#a3be8c;">Mari</span><span>&quot;)
+</span></code></pre>
+<hr />
+<p>This project could be extended to use CMAKE, in case one has a more complex build than just one C++ file.</p>
+<p>In a typical Python project without C++ extensions, <code>setup.py</code> is responsible for the entire build process. However, when integrating C++ extensions with CMake, <code>setup.py</code> often delegates the building of the extension to CMake.</p>
+<ul>
+<li>You need to specify if you want your build to be static or dynamically linked: <code>add_library(simplemath STATIC simplemath/simplemath.cpp)</code> if you don’t specify, CMAKE will make it shared by default. You can also use the following flag <code>set(BUILD_SHARED_LIBS ON)  # Set the default build type to shared libraries.</code></li>
+</ul>
+
+
+
+      </div> <!-- span9 -->
+
+      <div class="span3 bs-docs-sidebar">
+      
+        <h1>Search</h1>
+        <form class="form-search">
+          <input id="search" type="text" class="input-large search-query">
+        </form>
+        <div class="search-results">
+          <div class="search-results__items"></div>
+        </div>
+        <p></p>
+        <h1>Categories</h1>
+        <ul class="nav nav-list bs-docs-sidenav">
+          
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/categories/activism">activism</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/categories/journal">journal</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/categories/research">research</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/categories/tutorial">tutorial</a></li>
+          
+        </ul>
+        <p></p>
+        <h1>Tags</h1>
+        <ul class="nav nav-list bs-docs-sidenav">        
+          
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/ai">ai</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/art">art</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/books">books</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/community">community</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/counter-culture">counter-culture</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/cpp">cpp</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/data">data</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/design">design</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/electronics">electronics</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/js">js</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/learning">learning</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/lisp">lisp</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/love">love</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/performance">performance</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/privacy">privacy</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/python">python</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/rust">rust</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/security">security</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/software-tools">software-tools</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/web-dev">web-dev</a></li>
+              
+        </ul>
+      
+      </div>
+
+    </div> <!-- row -->
+  </div> <!-- container navmargin -->
+
+  <footer class="container">
+    <hr class="soften">
+    <p>
+        2023 &copy;
+        <a href="https:&#x2F;&#x2F;cyborgdream.github.io">Mari-chan</a>
+        |
+        
+        <a href="https://twitter.com/mari_meir" target="_blank">Twitter</a>
+        
+        
+        <a href="https://linkedin.com/in/mariana-meireles" target="_blank">Linkedin</a>
+        
+        
+        <a href="https://github.com/marimeireles" target="_blank">GitHub</a>
+        
+        
+        |
+        Built on <a href="https://getzola.org" target="_blank">Zola</a>
+    </p>
+  </footer>
+
+  <script src="https://cyborgdream.github.io/js/jquery.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-386.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-transition.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-alert.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-modal.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-dropdown.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-scrollspy.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-tab.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-tooltip.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-popover.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-button.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-collapse.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-carousel.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-typeahead.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-affix.js"></script>
+  <script src="https://cyborgdream.github.io/js/zola.386.js"></script>
+  <script src="https://cyborgdream.github.io/js/search.js"></script>
+  <script src="https://cyborgdream.github.io/elasticlunr.min.js"></script>
+  <script src="https://cyborgdream.github.io/search_index.en.js"></script>
+</body>
+</html>

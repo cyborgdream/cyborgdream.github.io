@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/Blog">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <link rel="stylesheet" href="https://cyborgdream.github.io/site.css">
+  <title>Do cyborgs dream of bionic sheep? - C++ to Rust II</title>
+  
+  
+
+  <meta name="description" itemprop="about" content="">
+  <meta name="keywords" itemprop="keywords" content="zola, theme, retro, hacking">
+  <meta name="author" itemprop="author" content="Mari-chan">
+  <meta itemprop="headline" content="Do cyborgs dream of bionic sheep?">
+  <meta itemprop="copyrightYear" content="2023">
+
+  <link rel="icon" href="https://cyborgdream.github.io/images/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="https://cyborgdream.github.io/images/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="https://cyborgdream.github.io/images/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="https://cyborgdream.github.io/images/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://cyborgdream.github.io/images/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="https://cyborgdream.github.io/images/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="https://cyborgdream.github.io/images/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="https://cyborgdream.github.io/images/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://cyborgdream.github.io/images/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://cyborgdream.github.io/images/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="https://cyborgdream.github.io/images/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://cyborgdream.github.io/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="https://cyborgdream.github.io/images/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://cyborgdream.github.io/images/favicon-16x16.png">
+  <link rel="manifest" href="https://cyborgdream.github.io/images/manifest.json">
+  <meta name="msapplication-TileColor" content="black">
+  <meta name="msapplication-TileImage" content="https://cyborgdream.github.io/images/ms-icon-144x144.png">
+  <meta name="theme-color" content="black">
+
+  <meta property="og:title" content="Do cyborgs dream of bionic sheep? - C++ to Rust II">
+  <meta property="og:description" content="27&#x2F;??? Continuing my journey from C++ to Rust">
+  <meta property="og:url" content="https:&#x2F;&#x2F;cyborgdream.github.io/rust-for-cpp-continues">
+  <meta property="og:site_name" content="Do cyborgs dream of bionic sheep?">
+  
+  <meta property="og:image" content="">
+  
+  <meta name="twitter:card" content="summary">
+  
+  <meta name="twitter:site" content="mari_meir">
+  <meta name="twitter:creator" content="mari_meir">
+  <meta name="twitter:image:alt" content="Do cyborgs dream of bionic sheep?">
+  
+
+  
+</head>
+
+<body data-spy="scroll" data-target=".bs-docs-sidebar">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"></button>
+            <a class="brand" href="https:&#x2F;&#x2F;cyborgdream.github.io">Do cyborgs dream of bionic sheep?</a>
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+                
+                
+                <li class="">
+                  <a href="https:&#x2F;&#x2F;cyborgdream.github.io/"><span>Home</span></a>
+                </li>
+                
+                <li class="">
+                  <a href="https:&#x2F;&#x2F;cyborgdream.github.io/categories"><span>Categories</span></a>
+                </li>
+                
+                <li class="">
+                  <a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags"><span>Tags</span></a>
+                </li>
+                
+                <li class="">
+                  <a href="https:&#x2F;&#x2F;cyborgdream.github.io/about"><span>About</span></a>
+                </li>
+                
+                
+              </ul>
+            </div>
+        </div>
+    </div>
+  </nav>
+
+  <div class="container navmargin">
+    <header class="jumbotron subhead" id="overview">
+      
+<p class="lead">
+  <span>&gt;&gt;</span>
+  <a href="https:&#x2F;&#x2F;cyborgdream.github.io">Home</a>
+  
+    <span class="divider">/</span>
+    <a class="category" href="https://cyborgdream.github.io/categories/journal/">journal</a>
+    <span class="divider">/</span>
+      
+        <a href="https://cyborgdream.github.io/tags/learning/">learning</a>,
+      
+        <a href="https://cyborgdream.github.io/tags/rust/">rust</a>
+      
+  
+</p>
+
+      
+<div class="page-header">
+  <h1>C++ to Rust II</h1>
+</div>
+
+      
+<p class="text-right">
+  <span class="label label-success">
+    &becaus;
+    
+      Mari-chan
+    
+  </span>
+  <span class="label label-success">&there4; 2022-04-15</span>
+  <span class="label label-success">&infin; 3'</span>
+</p>
+
+    </header>
+    
+    <div class="row-fluid">
+
+      <div class="span9 bs-docs-sidebar">
+      
+<p>Methods are always called as <code>.</code>.</p>
+<p>There are many different ways of choosing the size of your ints in rust:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>let x: bool = true;
+</span><span>let x = 34;   // type int
+</span><span>let x = 34u;  // type uint
+</span><span>let x: u8 = 34u8;
+</span><span>let x = 34i64;
+</span><span>let x = 34f32;
+</span></code></pre>
+<p>The <code>uint</code> is pointer sized, E.g, on a 32bit system means 32 bit unsigned integer.</p>
+<p>The <code>let</code> statement allows you to create new <code>x</code> variables, hiding the previous one.</p>
+<p>You can use the <code>as</code> keyword to cast stuff.</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>let x = 34u as int;     // cast unsigned int to int
+</span><span>let x = 10 as f32;      // int to float
+</span><span>let x = 10.45f64 as i8; // float to int (loses precision)
+</span><span>let x = 4u8 as u64;     // gains precision
+</span><span>let x = 400u16 as u8;   // 144, loses precision (and thus changes the value)
+</span><span>println!(&quot;`400u16 as u8` gives {}&quot;, x);
+</span><span>let x = -3i8 as u8;     // 253, signed to unsigned (changes sign)
+</span><span>println!(&quot;`-3i8 as u8` gives {}&quot;, x);
+</span><span>//let x = 45u as bool;  // FAILS!
+</span></code></pre>
+<h4 id="unique-pointers">Unique pointers</h4>
+<p>Rust enforces memory safety by type checking pointers.</p>
+<p>So... The way you create pointers are using the <code>Box&lt;T&gt;</code> keyword. And they're dereferenced the same way you'd do it in C++:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>fn foo() {
+</span><span>    let x = Box::new(75);
+</span><span>    println!(&quot;`x` points to {}&quot;, *x);
+</span><span>}
+</span></code></pre>
+<p>The mutability of the pointer will follow whatever the type is saying, so if you create a type <code>let</code> its pointer won't be mutable, on the other hand a <code>mut</code> pointer would.</p>
+<p>Pointers can be returned from a function, if they do, their memory is not freed (meaning there are no dangling pointers in Rust). However, they will eventually go out of scope and therefore will be freed.</p>
+<p>Pointers are unique (or linear).</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>fn foo() {
+</span><span>    let x = Box::new(75);
+</span><span>    let y = x;
+</span><span>    // x can no longer be accessed
+</span><span>    // let z = *x;   // Error.
+</span><span>}
+</span></code></pre>
+<p>Even if a pointer is passed to another function, it can no longer be accessed:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>fn bar(y: Box&lt;int&gt;) {
+</span><span>}
+</span><span>
+</span><span>fn foo() {
+</span><span>    let x = Box::new(75);
+</span><span>    bar(x);
+</span><span>    // x can no longer be accessed
+</span><span>    // let z = *x;   // Error.
+</span><span>}
+</span></code></pre>
+<p>Rust unique pointers are similar to C++ <code>std::unique_ptr</code>. The difference is that this is checked in runtime in C++ and in Rust it's compile time.</p>
+<p>Calling <code>Box::new(x)</code> to an existing <code>x</code> variable won't create a ref. to that value, but will simply copy it.</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>fn foo() {
+</span><span>    let x = 3;
+</span><span>    let mut y = Box::new(x);
+</span><span>    *y = 45;
+</span><span>    println!(&quot;x is still {}&quot;, x);
+</span><span>}
+</span></code></pre>
+<p>Rust has move rather than copy semantics, in general.</p>
+<h4 id="borrowed-pointers">Borrowed pointers</h4>
+<p>To have a reference to an existing value we use <code>&amp;</code>, this is the C++ fill for C++ pointer/reference, seems like it works the same as passing an item as a ref. to a function. Use <code>*</code> to deref.</p>
+<p>The <code>&amp;</code> op. doesn't allocate memory, if a borrowed ref. goes out of scope, no memory is deleted.</p>
+<p>Just like pointers references are immutable by default.</p>
+<p><code>let</code>s are just a keyword for auto, more or less, they're not really imposing anything.</p>
+
+
+
+      </div> <!-- span9 -->
+
+      <div class="span3 bs-docs-sidebar">
+      
+        <h1>Search</h1>
+        <form class="form-search">
+          <input id="search" type="text" class="input-large search-query">
+        </form>
+        <div class="search-results">
+          <div class="search-results__items"></div>
+        </div>
+        <p></p>
+        <h1>Categories</h1>
+        <ul class="nav nav-list bs-docs-sidenav">
+          
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/categories/activism">activism</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/categories/journal">journal</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/categories/research">research</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/categories/tutorial">tutorial</a></li>
+          
+        </ul>
+        <p></p>
+        <h1>Tags</h1>
+        <ul class="nav nav-list bs-docs-sidenav">        
+          
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/ai">ai</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/art">art</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/books">books</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/community">community</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/counter-culture">counter-culture</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/cpp">cpp</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/data">data</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/design">design</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/electronics">electronics</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/js">js</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/learning">learning</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/lisp">lisp</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/love">love</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/performance">performance</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/privacy">privacy</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/python">python</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/rust">rust</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/security">security</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/software-tools">software-tools</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/web-dev">web-dev</a></li>
+              
+        </ul>
+      
+      </div>
+
+    </div> <!-- row -->
+  </div> <!-- container navmargin -->
+
+  <footer class="container">
+    <hr class="soften">
+    <p>
+        2023 &copy;
+        <a href="https:&#x2F;&#x2F;cyborgdream.github.io">Mari-chan</a>
+        |
+        
+        <a href="https://twitter.com/mari_meir" target="_blank">Twitter</a>
+        
+        
+        <a href="https://linkedin.com/in/mariana-meireles" target="_blank">Linkedin</a>
+        
+        
+        <a href="https://github.com/marimeireles" target="_blank">GitHub</a>
+        
+        
+        |
+        Built on <a href="https://getzola.org" target="_blank">Zola</a>
+    </p>
+  </footer>
+
+  <script src="https://cyborgdream.github.io/js/jquery.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-386.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-transition.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-alert.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-modal.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-dropdown.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-scrollspy.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-tab.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-tooltip.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-popover.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-button.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-collapse.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-carousel.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-typeahead.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-affix.js"></script>
+  <script src="https://cyborgdream.github.io/js/zola.386.js"></script>
+  <script src="https://cyborgdream.github.io/js/search.js"></script>
+  <script src="https://cyborgdream.github.io/elasticlunr.min.js"></script>
+  <script src="https://cyborgdream.github.io/search_index.en.js"></script>
+</body>
+</html>

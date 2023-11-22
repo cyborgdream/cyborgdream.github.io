@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/Blog">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <link rel="stylesheet" href="https://cyborgdream.github.io/site.css">
+  <title>Do cyborgs dream of bionic sheep? - C++ to Rust III</title>
+  
+  
+
+  <meta name="description" itemprop="about" content="">
+  <meta name="keywords" itemprop="keywords" content="zola, theme, retro, hacking">
+  <meta name="author" itemprop="author" content="Mari-chan">
+  <meta itemprop="headline" content="Do cyborgs dream of bionic sheep?">
+  <meta itemprop="copyrightYear" content="2023">
+
+  <link rel="icon" href="https://cyborgdream.github.io/images/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="https://cyborgdream.github.io/images/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="https://cyborgdream.github.io/images/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="https://cyborgdream.github.io/images/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://cyborgdream.github.io/images/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="https://cyborgdream.github.io/images/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="https://cyborgdream.github.io/images/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="https://cyborgdream.github.io/images/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://cyborgdream.github.io/images/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://cyborgdream.github.io/images/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="https://cyborgdream.github.io/images/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://cyborgdream.github.io/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="https://cyborgdream.github.io/images/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://cyborgdream.github.io/images/favicon-16x16.png">
+  <link rel="manifest" href="https://cyborgdream.github.io/images/manifest.json">
+  <meta name="msapplication-TileColor" content="black">
+  <meta name="msapplication-TileImage" content="https://cyborgdream.github.io/images/ms-icon-144x144.png">
+  <meta name="theme-color" content="black">
+
+  <meta property="og:title" content="Do cyborgs dream of bionic sheep? - C++ to Rust III">
+  <meta property="og:description" content="29&#x2F;??? More pointers">
+  <meta property="og:url" content="https:&#x2F;&#x2F;cyborgdream.github.io/rust-for-cpp-pointers">
+  <meta property="og:site_name" content="Do cyborgs dream of bionic sheep?">
+  
+  <meta property="og:image" content="">
+  
+  <meta name="twitter:card" content="summary">
+  
+  <meta name="twitter:site" content="mari_meir">
+  <meta name="twitter:creator" content="mari_meir">
+  <meta name="twitter:image:alt" content="Do cyborgs dream of bionic sheep?">
+  
+
+  
+</head>
+
+<body data-spy="scroll" data-target=".bs-docs-sidebar">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"></button>
+            <a class="brand" href="https:&#x2F;&#x2F;cyborgdream.github.io">Do cyborgs dream of bionic sheep?</a>
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+                
+                
+                <li class="">
+                  <a href="https:&#x2F;&#x2F;cyborgdream.github.io/"><span>Home</span></a>
+                </li>
+                
+                <li class="">
+                  <a href="https:&#x2F;&#x2F;cyborgdream.github.io/categories"><span>Categories</span></a>
+                </li>
+                
+                <li class="">
+                  <a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags"><span>Tags</span></a>
+                </li>
+                
+                <li class="">
+                  <a href="https:&#x2F;&#x2F;cyborgdream.github.io/about"><span>About</span></a>
+                </li>
+                
+                
+              </ul>
+            </div>
+        </div>
+    </div>
+  </nav>
+
+  <div class="container navmargin">
+    <header class="jumbotron subhead" id="overview">
+      
+<p class="lead">
+  <span>&gt;&gt;</span>
+  <a href="https:&#x2F;&#x2F;cyborgdream.github.io">Home</a>
+  
+    <span class="divider">/</span>
+    <a class="category" href="https://cyborgdream.github.io/categories/journal/">journal</a>
+    <span class="divider">/</span>
+      
+        <a href="https://cyborgdream.github.io/tags/learning/">learning</a>,
+      
+        <a href="https://cyborgdream.github.io/tags/rust/">rust</a>
+      
+  
+</p>
+
+      
+<div class="page-header">
+  <h1>C++ to Rust III</h1>
+</div>
+
+      
+<p class="text-right">
+  <span class="label label-success">
+    &becaus;
+    
+      Mari-chan
+    
+  </span>
+  <span class="label label-success">&there4; 2022-04-20</span>
+  <span class="label label-success">&infin; 2'</span>
+</p>
+
+    </header>
+    
+    <div class="row-fluid">
+
+      <div class="span9 bs-docs-sidebar">
+      
+<p>Happy 4/20!!!</p>
+<h4 id="borrowed-pointers-part-ii">Borrowed pointers part II</h4>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>fn foo() {
+</span><span>    let x = 5;                // type: i32
+</span><span>    let y = &amp;x;               // type: &amp;i32
+</span><span>    let z = y;                // type: &amp;i32
+</span><span>    let w = y;                // type: &amp;i32
+</span><span>    println!(&quot;These should all 5: {} {} {}&quot;, *w, *y, *z);
+</span><span>}
+</span></code></pre>
+<p>If a mutable value is borrowed, it becomes immutable for the duration of the borrow, meaning that stuff like the following won't work:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>fn foo() {
+</span><span>    let mut x = 5;            // type: i32
+</span><span>    {
+</span><span>        let y = &amp;x;           // type: &amp;i32
+</span><span>        //x = 4;              // Error - x has been borrowed
+</span><span>        println!(&quot;{}&quot;, x);    // Ok - x can be read
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<p>Unlike C++, Rust won't automatically reference a value for you:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>fn foo(x: &amp;i32) { ... }
+</span><span>
+</span><span>fn bar(x: i32, y: Box&lt;i32&gt;) {
+</span><span>    foo(&amp;x);
+</span><span>    // foo(x);   // Error - expected &amp;i32, found i32
+</span><span>    foo(y);      // Ok
+</span><span>    foo(&amp;*y);    // Also ok, and more explicit, but not good style
+</span><span>}
+</span></code></pre>
+<p>If you have an immutable variable in rust, you are guaranteed it won't change. All mutable vars are unique. If you have a mut var you know it's not going to change unless you change it.</p>
+<p>In Rust it's not possible to create a borrowed reference that will outlive the reference, the lifetime of the reference must be shorter than the lifetime of the reference value (or at least as long, if I understand it correctly). Example:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>fn foo() {
+</span><span>    let x = 5;
+</span><span>    let mut xr = &amp;x;  // Ok - x and xr have the same lifetime
+</span><span>    {
+</span><span>        let y = 6;
+</span><span>        //xr = &amp;y     // Error - xr will outlive y
+</span><span>    }                 // y is released here
+</span><span>}                     // x and xr are released here
+</span><span>
+</span></code></pre>
+<p>There's something called explicit lifetimes, and lifetime-polymorphism, that looks like this: <code>&amp;'a T (cf &amp;T)</code> - but it's something for the future.</p>
+<p>I'm skipping Rc and raw pointers cause it seems like an uncertain part of the language.</p>
+<h4 id="data-types">Data types</h4>
+<p>Structs can't be recursive in Rust.</p>
+<p>You can use <code>let</code> to destructure deep types:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>fn bar(x: (int, int)) {
+</span><span>    let (a, b) = x;
+</span><span>    println!(&quot;x was ({}, {})&quot;, a, b);
+</span><span>}
+</span></code></pre>
+<p>Enums are useful in Rust:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>enum Expr {
+</span><span>    Add(int, int),
+</span><span>    Or(bool, bool),
+</span><span>    Lit(int)
+</span><span>}
+</span><span>
+</span><span>fn foo() {
+</span><span>    let x = Or(true, false);   // x has type Expr
+</span><span>}
+</span></code></pre>
+<p>You can do pretty complex things with it using <code>match</code>:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>fn bar(e: Expr) {
+</span><span>    match e {
+</span><span>        Add(x, y) =&gt; println!(&quot;An `Add` variant: {} + {}&quot;, x, y),
+</span><span>        Or(..) =&gt; println!(&quot;An `Or` variant&quot;),
+</span><span>        _ =&gt; println!(&quot;Something else (in this case, a `Lit`)&quot;),
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<p>Kind of beautiful, you also have to treat for all cases.</p>
+<p>Meh, okay I'm bored of reading stuff I want to implement things...</p>
+
+
+
+      </div> <!-- span9 -->
+
+      <div class="span3 bs-docs-sidebar">
+      
+        <h1>Search</h1>
+        <form class="form-search">
+          <input id="search" type="text" class="input-large search-query">
+        </form>
+        <div class="search-results">
+          <div class="search-results__items"></div>
+        </div>
+        <p></p>
+        <h1>Categories</h1>
+        <ul class="nav nav-list bs-docs-sidenav">
+          
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/categories/activism">activism</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/categories/journal">journal</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/categories/research">research</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/categories/tutorial">tutorial</a></li>
+          
+        </ul>
+        <p></p>
+        <h1>Tags</h1>
+        <ul class="nav nav-list bs-docs-sidenav">        
+          
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/ai">ai</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/art">art</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/books">books</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/community">community</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/counter-culture">counter-culture</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/cpp">cpp</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/data">data</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/design">design</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/electronics">electronics</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/js">js</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/learning">learning</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/lisp">lisp</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/love">love</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/performance">performance</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/privacy">privacy</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/python">python</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/rust">rust</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/security">security</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/software-tools">software-tools</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/web-dev">web-dev</a></li>
+              
+        </ul>
+      
+      </div>
+
+    </div> <!-- row -->
+  </div> <!-- container navmargin -->
+
+  <footer class="container">
+    <hr class="soften">
+    <p>
+        2023 &copy;
+        <a href="https:&#x2F;&#x2F;cyborgdream.github.io">Mari-chan</a>
+        |
+        
+        <a href="https://twitter.com/mari_meir" target="_blank">Twitter</a>
+        
+        
+        <a href="https://linkedin.com/in/mariana-meireles" target="_blank">Linkedin</a>
+        
+        
+        <a href="https://github.com/marimeireles" target="_blank">GitHub</a>
+        
+        
+        |
+        Built on <a href="https://getzola.org" target="_blank">Zola</a>
+    </p>
+  </footer>
+
+  <script src="https://cyborgdream.github.io/js/jquery.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-386.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-transition.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-alert.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-modal.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-dropdown.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-scrollspy.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-tab.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-tooltip.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-popover.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-button.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-collapse.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-carousel.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-typeahead.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-affix.js"></script>
+  <script src="https://cyborgdream.github.io/js/zola.386.js"></script>
+  <script src="https://cyborgdream.github.io/js/search.js"></script>
+  <script src="https://cyborgdream.github.io/elasticlunr.min.js"></script>
+  <script src="https://cyborgdream.github.io/search_index.en.js"></script>
+</body>
+</html>

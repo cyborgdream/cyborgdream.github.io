@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/Blog">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <link rel="stylesheet" href="https://cyborgdream.github.io/site.css">
+  <title>Do cyborgs dream of bionic sheep? - Python&#x27;s processes, threading and memory</title>
+  
+  
+
+  <meta name="description" itemprop="about" content="">
+  <meta name="keywords" itemprop="keywords" content="zola, theme, retro, hacking">
+  <meta name="author" itemprop="author" content="Mari-chan">
+  <meta itemprop="headline" content="Do cyborgs dream of bionic sheep?">
+  <meta itemprop="copyrightYear" content="2023">
+
+  <link rel="icon" href="https://cyborgdream.github.io/images/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="https://cyborgdream.github.io/images/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="https://cyborgdream.github.io/images/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="https://cyborgdream.github.io/images/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://cyborgdream.github.io/images/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="https://cyborgdream.github.io/images/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="https://cyborgdream.github.io/images/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="https://cyborgdream.github.io/images/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://cyborgdream.github.io/images/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://cyborgdream.github.io/images/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="https://cyborgdream.github.io/images/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://cyborgdream.github.io/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="https://cyborgdream.github.io/images/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://cyborgdream.github.io/images/favicon-16x16.png">
+  <link rel="manifest" href="https://cyborgdream.github.io/images/manifest.json">
+  <meta name="msapplication-TileColor" content="black">
+  <meta name="msapplication-TileImage" content="https://cyborgdream.github.io/images/ms-icon-144x144.png">
+  <meta name="theme-color" content="black">
+
+  <meta property="og:title" content="Do cyborgs dream of bionic sheep? - Python&#x27;s processes, threading and memory">
+  <meta property="og:description" content="Little nuggets on memory, parallelization, asyncio and multithreading in Python">
+  <meta property="og:url" content="https:&#x2F;&#x2F;cyborgdream.github.io/python-process-refresh">
+  <meta property="og:site_name" content="Do cyborgs dream of bionic sheep?">
+  
+  <meta property="og:image" content="">
+  
+  <meta name="twitter:card" content="summary">
+  
+  <meta name="twitter:site" content="mari_meir">
+  <meta name="twitter:creator" content="mari_meir">
+  <meta name="twitter:image:alt" content="Do cyborgs dream of bionic sheep?">
+  
+
+  
+</head>
+
+<body data-spy="scroll" data-target=".bs-docs-sidebar">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"></button>
+            <a class="brand" href="https:&#x2F;&#x2F;cyborgdream.github.io">Do cyborgs dream of bionic sheep?</a>
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+                
+                
+                <li class="">
+                  <a href="https:&#x2F;&#x2F;cyborgdream.github.io/"><span>Home</span></a>
+                </li>
+                
+                <li class="">
+                  <a href="https:&#x2F;&#x2F;cyborgdream.github.io/categories"><span>Categories</span></a>
+                </li>
+                
+                <li class="">
+                  <a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags"><span>Tags</span></a>
+                </li>
+                
+                <li class="">
+                  <a href="https:&#x2F;&#x2F;cyborgdream.github.io/about"><span>About</span></a>
+                </li>
+                
+                
+              </ul>
+            </div>
+        </div>
+    </div>
+  </nav>
+
+  <div class="container navmargin">
+    <header class="jumbotron subhead" id="overview">
+      
+<p class="lead">
+  <span>&gt;&gt;</span>
+  <a href="https:&#x2F;&#x2F;cyborgdream.github.io">Home</a>
+  
+    <span class="divider">/</span>
+    <a class="category" href="https://cyborgdream.github.io/categories/tutorial/">tutorial</a>
+    <span class="divider">/</span>
+      
+        <a href="https://cyborgdream.github.io/tags/python/">python</a>,
+      
+        <a href="https://cyborgdream.github.io/tags/performance/">performance</a>
+      
+  
+</p>
+
+      
+<div class="page-header">
+  <h1>Python&#x27;s processes, threading and memory</h1>
+</div>
+
+      
+<p class="text-right">
+  <span class="label label-success">
+    &becaus;
+    
+      Mari-chan
+    
+  </span>
+  <span class="label label-success">&there4; 2023-11-22</span>
+  <span class="label label-success">&infin; 13'</span>
+</p>
+
+    </header>
+    
+    <div class="row-fluid">
+
+      <div class="span9 bs-docs-sidebar">
+      
+<p>This is part of a series where I write down things I know or I've learned while trying to keep myself sharp in various subjects that I don't use so often anymore.</p>
+<p>This blog post is about Python memory management and various applications for parallel and multithreading computations. Let's go straight to it!</p>
+<h3 id="python-s-memory-management">Python's memory management</h3>
+<p>Python manages memory through a private heap space. It uses algorithms like garbage collection (that keeps tracks of variables and such by reference counting). Memory for variables is not statically allocated, when variables are declared Python infers the data type and allocates memory accordingly.</p>
+<p>When thinking about memory management in different threads or in parallel computing then it's also important to understand the role of the Python GIL. </p>
+<p>The GIL is a kind of lock. When you’re sharing or modifying data using different threads you ideally need something that will keep track of all the changes that are happening, so you avoid data corruption. Only one Python thread can hold the GIL at a time. This means that only one thread can execute Python code at any time, regardless of the number of CPUs. Meaning Python is not truly concurrent, if you define concurrent by being able to run several threads at the same time. You can work around this by using <code>multiprocessing</code></p>
+<p>To prevent a Python thread from holding the GIL indefinitely Python causes the current thread every 5ms, releasing the GIL.</p>
+<p>Every Python standard lib functions that makes a syscall releases the GIL. E. g disk IO, network IO and <code>time.sleep()</code>. Many CPU intensive functions also release the GIL.</p>
+<p>If one is doing intensive CPU work it’s advisable to use the <code>multiprocessing</code> module, however if one is doing multiple IO-bound tasks, threading is still recommended as most of the time spent on IO is waiting for the IO itself and not processing it or writing it to memory.</p>
+<p>Another specific Python trait is that it has a garbage collector. The garbage collector exists for every Python process (we will get into what is a process later on). It keeps tracks of the number of variables that we have running on the code. Once these variables are out of scope, their counter goes down, if it goes to 0 the object is deallocated, and its memory is freed. The garbage collector will also delete any variable by the end of a process’ execution.
+Python also employs a cyclic garbage collector because reference counting alone can't deal with cycles — situations where a group of objects reference each other, but are not referenced anywhere else in the code. The cyclic collector periodically searches for such groups of objects and reclaims them.
+The garbage collector runs automatically during program execution but can also be manually triggered.</p>
+<h3 id="python-processes-threads-and-coroutines">Python processes, threads and coroutines</h3>
+<p>First, let's get an overview on each one of these terms so we can dive in into the details.</p>
+<p><strong>Process:</strong> an instance of a program running. There are usually hundreds of these going on at the same time and the OS scheduler suspends them periodically to allow other processes to run. Each process has their own memory, meaning they have to communicate with each other through pipes or sockets (which only carry raw bites), that’s why Python objects must be serialized in order to pass from one process to another.</p>
+<p><strong>Thread:</strong> An execution unit within a process. When a process starts it only has one thread, but it can spawn more. Threads within one process share the same memory space.</p>
+<p><strong>Coroutine:</strong> A function that suspends itself and resume later. <code>async def</code>. Python coroutines usually run under a single a thread under one event loop. Frameworks like asyncio, Curio or Trio provide an event loop and support libraries for nonblocking coroutine-based I/O. Coroutines must explicitly cede control with the <code>yield</code> or <code>await</code> keyword, so that another may proceed concurrently may take place. This means any blocking code in a coroutine blocks the execution of the event loop and all other coroutines.</p>
+<ul>
+<li>Each instance of Python is a process. You can start additional Python processes using <code>multiprocessing</code> or <code>concurrent.futures</code>. The new spawned process won’t share memory between them.</li>
+<li>Python starts with one thread in which it runs the user’s program and the garbage collector. You can start new thread by using <code>threading</code> or <code>concurrent.futures</code></li>
+</ul>
+<p>I always found these terms very confusing, so here are some extra points on what are <strong>the differences between multiprocessing (or parallelization) and multithreading</strong>:</p>
+<ul>
+<li>In Python, multithreading involves multiple threads of execution within a single process.</li>
+<li>Threads share the same memory space, which makes for efficient memory usage and easier data sharing.</li>
+<li>Due to the GIL, Python threads are not truly parallel in CPU-bound tasks. Instead, they are useful for I/O-bound tasks where the program spends a lot of time waiting for external events.</li>
+<li>The <code>threading</code> module is used to implement multithreading in Python.</li>
+</ul>
+<p>Graphic interfaces running on Python might use multithreading to keep the GUI running while running some expensive computation on the back. As shown in the following <code>tkinter</code> example:</p>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#b48ead;">import </span><span>tkinter </span><span style="color:#b48ead;">as </span><span>tk
+</span><span style="color:#b48ead;">from </span><span>threading </span><span style="color:#b48ead;">import </span><span>Thread
+</span><span style="color:#b48ead;">import </span><span>time
+</span><span>
+</span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">long_running_task</span><span>():
+</span><span>    </span><span style="color:#65737e;"># Simulate a long-running task
+</span><span>    time.</span><span style="color:#bf616a;">sleep</span><span>(</span><span style="color:#d08770;">5</span><span>)
+</span><span>    </span><span style="color:#96b5b4;">print</span><span>(&quot;</span><span style="color:#a3be8c;">Task finished</span><span>&quot;)
+</span><span>
+</span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">start_task</span><span>():
+</span><span>    </span><span style="color:#bf616a;">Thread</span><span>(</span><span style="color:#bf616a;">target</span><span>=long_running_task).</span><span style="color:#bf616a;">start</span><span>()
+</span><span>
+</span><span>app = tk.</span><span style="color:#bf616a;">Tk</span><span>()
+</span><span>app.</span><span style="color:#bf616a;">geometry</span><span>(&#39;</span><span style="color:#a3be8c;">200x100</span><span>&#39;)
+</span><span>
+</span><span>start_button = tk.</span><span style="color:#bf616a;">Button</span><span>(app, </span><span style="color:#bf616a;">text</span><span>=&#39;</span><span style="color:#a3be8c;">Start Task</span><span>&#39;, </span><span style="color:#bf616a;">command</span><span>=start_task)
+</span><span>start_button.</span><span style="color:#bf616a;">pack</span><span>(</span><span style="color:#bf616a;">pady</span><span>=</span><span style="color:#d08770;">20</span><span>)
+</span><span>
+</span><span>app.</span><span style="color:#bf616a;">mainloop</span><span>()
+</span></code></pre>
+<ul>
+<li>Multiprocessing involves creating multiple processes, each with its own Python interpreter and memory space.</li>
+<li>This allows each process to run on a separate CPU core, bypassing the GIL, and therefore can achieve true parallelism in CPU-bound tasks.</li>
+<li>Data sharing between processes is more complex and less efficient because it requires inter-process communication (IPC) mechanisms like queues or shared memory.</li>
+<li>The <code>multiprocessing</code> module is used to implement multiprocessing in Python.</li>
+</ul>
+<p>Now that we cleared these one out there are still one point that might get you confused which is within <strong>asyncio and multithreading</strong>. So let's dive in to that too.</p>
+<p>Both <code>asyncio</code> and multithreading are used to deal with I/O in Python. However, there are some differences between both. So, for multithreading you have an extra overhead of having to switch between threads, besides you still have to manage data with locks and such because the GIL is only taking care of that two threads to access the same data at the same time but these data could still be interfered with and produce bad data.</p>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#b48ead;">import </span><span>threading
+</span><span>
+</span><span style="color:#65737e;"># A shared resource
+</span><span>counter = </span><span style="color:#d08770;">0
+</span><span>
+</span><span style="color:#65737e;"># A lock object to synchronize access to the shared resource
+</span><span>lock = threading.</span><span style="color:#bf616a;">Lock</span><span>()
+</span><span>
+</span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">increment</span><span>():
+</span><span>    </span><span style="color:#b48ead;">global </span><span>counter
+</span><span>    </span><span style="color:#b48ead;">with </span><span>lock:
+</span><span>        </span><span style="color:#b48ead;">for </span><span style="color:#bf616a;">_ </span><span style="color:#b48ead;">in </span><span style="color:#96b5b4;">range</span><span>(</span><span style="color:#d08770;">100000</span><span>):
+</span><span>            counter += </span><span style="color:#d08770;">1
+</span><span>
+</span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">decrement</span><span>():
+</span><span>    </span><span style="color:#b48ead;">global </span><span>counter
+</span><span>    </span><span style="color:#b48ead;">with </span><span>lock:
+</span><span>        </span><span style="color:#b48ead;">for </span><span style="color:#bf616a;">_ </span><span style="color:#b48ead;">in </span><span style="color:#96b5b4;">range</span><span>(</span><span style="color:#d08770;">100000</span><span>):
+</span><span>            counter -= </span><span style="color:#d08770;">1
+</span><span>
+</span><span style="color:#65737e;"># Creating threads
+</span><span>t1 = threading.</span><span style="color:#bf616a;">Thread</span><span>(</span><span style="color:#bf616a;">target</span><span>=increment)
+</span><span>t2 = threading.</span><span style="color:#bf616a;">Thread</span><span>(</span><span style="color:#bf616a;">target</span><span>=decrement)
+</span><span>
+</span><span style="color:#65737e;"># Starting threads
+</span><span>t1.</span><span style="color:#bf616a;">start</span><span>()
+</span><span>t2.</span><span style="color:#bf616a;">start</span><span>()
+</span><span>
+</span><span style="color:#65737e;"># Waiting for threads to complete
+</span><span>t1.</span><span style="color:#bf616a;">join</span><span>()
+</span><span>t2.</span><span style="color:#bf616a;">join</span><span>()
+</span><span>
+</span><span style="color:#96b5b4;">print</span><span>(counter)
+</span></code></pre>
+<p>I think the best use case scenario for multithreading instead of asyncio is when integrating with C extensions. If these libraries are releasing the GIL to compute their own operations it might make sense to keep the architecture consistency. Also when working with Python GUIs as explained above. And of course when your tasks are actually computationally heavy and you need a mix of CPU and IO to deal with them.</p>
+<p><strong>Futures:</strong> Futures are found in both contexts of asyncio and multithreading. Though they’re implemented differently in each context.</p>
+<p>In the context of multithreading, a <code>Future</code> is often called a <code>concurrent.futures.Future</code>, provided by the <code>concurrent.futures</code> module. It represents a future result of a computational task that can be executed in a separate thread or process pool.</p>
+<p>When to use <code>asyncio</code> Futures over Tasks:</p>
+<ul>
+<li>When interfacing with lower-level asynchronous code that uses callbacks (e.g., integrating with a library that doesn't use <code>async</code>/<code>await</code>), you might receive a Future object that you can await.</li>
+<li>When you need a cancellable and checkable future that may be set from outside of the coroutine itself.</li>
+</ul>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#b48ead;">import </span><span>asyncio
+</span><span>
+</span><span style="color:#b48ead;">async def </span><span style="color:#8fa1b3;">set_future_result</span><span>(</span><span style="color:#bf616a;">future</span><span>, </span><span style="color:#bf616a;">result</span><span>):
+</span><span>    </span><span style="color:#b48ead;">await </span><span>asyncio.</span><span style="color:#bf616a;">sleep</span><span>(</span><span style="color:#d08770;">2</span><span>)  </span><span style="color:#65737e;"># Simulate work
+</span><span>    future.</span><span style="color:#bf616a;">set_result</span><span>(result)
+</span><span>
+</span><span style="color:#b48ead;">async def </span><span style="color:#8fa1b3;">main</span><span>():
+</span><span>    </span><span style="color:#65737e;"># Create a Future object
+</span><span>    future = asyncio.</span><span style="color:#bf616a;">Future</span><span>()
+</span><span>
+</span><span>    </span><span style="color:#65737e;"># Schedule setting the future result
+</span><span>    asyncio.</span><span style="color:#bf616a;">create_task</span><span>(</span><span style="color:#bf616a;">set_future_result</span><span>(future, &#39;</span><span style="color:#a3be8c;">Future is done!</span><span>&#39;))
+</span><span>
+</span><span>    </span><span style="color:#65737e;"># Wait for the future to be set
+</span><span>    result = </span><span style="color:#b48ead;">await </span><span>future
+</span><span>    </span><span style="color:#96b5b4;">print</span><span>(result)
+</span><span>
+</span><span>asyncio.</span><span style="color:#bf616a;">run</span><span>(</span><span style="color:#bf616a;">main</span><span>())
+</span></code></pre>
+<p>In <code>asyncio</code>, a Future is an object that represents the result of work that has not been completed yet. It acts as a placeholder for the eventual result of an asynchronous operation. When you <code>await</code> on a Future in <code>asyncio</code>, you're telling the event loop to continue running other tasks until this Future's result is available.</p>
+<p>When to use <code>concurrent.futures.Future</code> over direct multithreading:</p>
+<ul>
+<li>When you want to execute a computation in a separate thread/process and want an easy way to retrieve its result.</li>
+<li>When you want to submit multiple tasks to a thread/process pool and manage their results.</li>
+</ul>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#b48ead;">from </span><span>concurrent.futures </span><span style="color:#b48ead;">import </span><span>ThreadPoolExecutor
+</span><span style="color:#b48ead;">import </span><span>time
+</span><span>
+</span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">compute_square</span><span>(</span><span style="color:#bf616a;">n</span><span>):
+</span><span>    time.</span><span style="color:#bf616a;">sleep</span><span>(</span><span style="color:#d08770;">2</span><span>)  </span><span style="color:#65737e;"># Simulate work
+</span><span>    </span><span style="color:#b48ead;">return </span><span>n * n
+</span><span>
+</span><span style="color:#65737e;"># Using ThreadPoolExecutor to execute a function in a separate thread
+</span><span style="color:#b48ead;">with </span><span style="color:#bf616a;">ThreadPoolExecutor</span><span>() </span><span style="color:#b48ead;">as </span><span>executor:
+</span><span>    </span><span style="color:#65737e;"># Schedule the execution and get a Future object
+</span><span>    future = executor.</span><span style="color:#bf616a;">submit</span><span>(compute_square, </span><span style="color:#d08770;">2</span><span>)
+</span><span>
+</span><span>    </span><span style="color:#65737e;"># Do other things here if needed...
+</span><span>
+</span><span>    </span><span style="color:#65737e;"># Retrieve the result with future.result() which will block until the result is available
+</span><span>    result = future.</span><span style="color:#bf616a;">result</span><span>()
+</span><span>    </span><span style="color:#96b5b4;">print</span><span>(</span><span style="color:#b48ead;">f</span><span>&quot;</span><span style="color:#a3be8c;">The square of 2 is </span><span>{result}&quot;)
+</span></code></pre>
+<h3 id="nuggets-of-knowledge">Nuggets of knowledge</h3>
+<p>Now that you hopefully have the fundamental definitions we can dive into some specific common problems and their solutions:</p>
+<p><strong>Handling race conditions in Python</strong></p>
+<p>Making sure a race condition doesn’t happen means making sure no concurrent processes or threads perform conflicting operations on shared resources. One can use locks to achieve that, lock the data and only allow it to be modified after all the relevant operations were completed. One can use the <code>Queue</code> Python module to transfer data between threads. One could use immutable data structures like tuples, to make sure that they’re not being modified. </p>
+<p>One could also use higher level abstractions like <code>concurrent.futures.ThreadPoolExecutor</code> which will manage tasks without the need of taking care of individual locks. Here you don’t need to worry about it because you can use tasks that are schedule.</p>
+<p>However, it’s important to note that while <code>ThreadPoolExecutor</code> handles the synchronization of task submission and execution, if your tasks themselves need to modify shared data, you must still handle synchronization within those tasks to avoid race conditions. This is where you might still need to use locks or other synchronization mechanisms, such as those provided by the <code>threading</code> or <code>multiprocessing</code> modules.</p>
+<p>For example, if you have a counter that is incremented by each task, you would need to ensure that incrementing the counter is an atomic operation to prevent a race condition. This could be done with a lock:</p>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#b48ead;">from </span><span>concurrent.futures </span><span style="color:#b48ead;">import </span><span>ThreadPoolExecutor
+</span><span style="color:#b48ead;">from </span><span>threading </span><span style="color:#b48ead;">import </span><span>Lock
+</span><span>
+</span><span>counter = </span><span style="color:#d08770;">0
+</span><span>lock = </span><span style="color:#bf616a;">Lock</span><span>()
+</span><span>
+</span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">increment_counter</span><span>():
+</span><span>    </span><span style="color:#b48ead;">global </span><span>counter
+</span><span>    </span><span style="color:#b48ead;">with </span><span>lock:
+</span><span>        counter += </span><span style="color:#d08770;">1
+</span><span>
+</span><span style="color:#b48ead;">with </span><span style="color:#bf616a;">ThreadPoolExecutor</span><span>(</span><span style="color:#bf616a;">max_workers</span><span>=</span><span style="color:#d08770;">10</span><span>) </span><span style="color:#b48ead;">as </span><span>executor:
+</span><span>    futures = [executor.</span><span style="color:#bf616a;">submit</span><span>(increment_counter) </span><span style="color:#b48ead;">for </span><span style="color:#bf616a;">_ </span><span style="color:#b48ead;">in </span><span style="color:#96b5b4;">range</span><span>(</span><span style="color:#d08770;">100</span><span>)]
+</span><span>
+</span><span style="color:#65737e;"># Wait for all tasks to complete
+</span><span style="color:#b48ead;">for </span><span>future </span><span style="color:#b48ead;">in </span><span>futures:
+</span><span>    future.</span><span style="color:#bf616a;">result</span><span>()
+</span><span>
+</span><span style="color:#96b5b4;">print</span><span>(counter)
+</span></code></pre>
+<p>On side notes you could also use a <code>semaphore</code>, in which you allow a number of threads to use the same memory space. </p>
+<p>There’s also the <code>Condition</code> API, for example, but I’ve never used it.</p>
+<p><strong>Decorators and optimization</strong></p>
+<p>You might have heard of decorators in Python. If not, here's a refresher on them:</p>
+<p>Decorators are special Python attributes that allows the developer to change the content of a function. They’re just really syntactic sugar to pass one function as the input of a function and to output them. </p>
+<p>A common case of decorator’s use is in order to trigger events. Here’s an example:</p>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#65737e;"># A simple event system
+</span><span>
+</span><span style="color:#65737e;"># A dictionary to hold event names and their associated callbacks
+</span><span>event_registry = {}
+</span><span>
+</span><span style="color:#65737e;"># The decorator function for registering callbacks
+</span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">register_event</span><span>(</span><span style="color:#bf616a;">event_name</span><span>):
+</span><span>    </span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">registrar</span><span>(</span><span style="color:#bf616a;">func</span><span>):
+</span><span>        event_registry.</span><span style="color:#bf616a;">setdefault</span><span>(event_name, []).</span><span style="color:#bf616a;">append</span><span>(func)
+</span><span>        </span><span style="color:#b48ead;">return </span><span>func
+</span><span>    </span><span style="color:#b48ead;">return </span><span>registrar
+</span><span>
+</span><span style="color:#65737e;"># Using the decorator to register handlers for specific events
+</span><span>@</span><span style="color:#bf616a;">register_event</span><span>(&#39;</span><span style="color:#a3be8c;">startup</span><span>&#39;)
+</span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">handle_startup</span><span>():
+</span><span>    </span><span style="color:#96b5b4;">print</span><span>(&quot;</span><span style="color:#a3be8c;">Handling startup event.</span><span>&quot;)
+</span><span>
+</span><span>@</span><span style="color:#bf616a;">register_event</span><span>(&#39;</span><span style="color:#a3be8c;">shutdown</span><span>&#39;)
+</span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">handle_shutdown</span><span>():
+</span><span>    </span><span style="color:#96b5b4;">print</span><span>(&quot;</span><span style="color:#a3be8c;">Handling shutdown event.</span><span>&quot;)
+</span><span>
+</span><span style="color:#65737e;"># A function to simulate an event and call the registered functions
+</span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">trigger_event</span><span>(</span><span style="color:#bf616a;">event_name</span><span>):
+</span><span>    </span><span style="color:#b48ead;">for </span><span>func </span><span style="color:#b48ead;">in </span><span>event_registry.</span><span style="color:#bf616a;">get</span><span>(event_name, []):
+</span><span>        </span><span style="color:#bf616a;">func</span><span>()
+</span><span>
+</span><span style="color:#65737e;"># Simulate events
+</span><span style="color:#bf616a;">trigger_event</span><span>(&#39;</span><span style="color:#a3be8c;">startup</span><span>&#39;)
+</span><span style="color:#bf616a;">trigger_event</span><span>(&#39;</span><span style="color:#a3be8c;">shutdown</span><span>&#39;)
+</span></code></pre>
+<p>Or in Flask, you can decorate functions with a route, <code>@app.route('index')</code> so when the user is in the index page, trigger the function that was decorated with this route.</p>
+<p>It can also be used in lazy evaluation situations. In which we store the value of a computation.</p>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#b48ead;">class </span><span style="color:#ebcb8b;">LazyProperty</span><span style="color:#eff1f5;">:
+</span><span>    </span><span style="color:#b48ead;">def </span><span style="color:#96b5b4;">__init__</span><span>(</span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">function</span><span>):
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.function = function
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.name = function.__name__
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">def </span><span style="color:#96b5b4;">__get__</span><span>(</span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">obj</span><span>, </span><span style="color:#bf616a;">cls</span><span>):
+</span><span>        </span><span style="color:#b48ead;">if </span><span>obj is </span><span style="color:#d08770;">None</span><span>:
+</span><span>            </span><span style="color:#b48ead;">return </span><span style="color:#bf616a;">self
+</span><span>        value = </span><span style="color:#bf616a;">self</span><span>.</span><span style="color:#bf616a;">function</span><span>(obj)
+</span><span>        </span><span style="color:#96b5b4;">setattr</span><span>(obj, </span><span style="color:#bf616a;">self</span><span>.name, value)
+</span><span>        </span><span style="color:#b48ead;">return </span><span>value
+</span><span>
+</span><span style="color:#b48ead;">class </span><span style="color:#ebcb8b;">ExpensiveObject</span><span style="color:#eff1f5;">:
+</span><span>    </span><span style="color:#b48ead;">def </span><span style="color:#96b5b4;">__init__</span><span>(</span><span style="color:#bf616a;">self</span><span>):
+</span><span>        </span><span style="color:#bf616a;">self</span><span>._expensive_attribute = </span><span style="color:#d08770;">None
+</span><span>
+</span><span>    @</span><span style="color:#bf616a;">LazyProperty
+</span><span>    </span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">expensive_attribute</span><span>(</span><span style="color:#bf616a;">self</span><span>):
+</span><span>        </span><span style="color:#96b5b4;">print</span><span>(&quot;</span><span style="color:#a3be8c;">Computing the expensive attribute...</span><span>&quot;)
+</span><span>        </span><span style="color:#65737e;"># Simulate an expensive computation
+</span><span>        </span><span style="color:#b48ead;">import </span><span>time
+</span><span>        time.</span><span style="color:#bf616a;">sleep</span><span>(</span><span style="color:#d08770;">2</span><span>)  </span><span style="color:#65737e;"># Delay to simulate expensive computation
+</span><span>        </span><span style="color:#b48ead;">return </span><span>&quot;</span><span style="color:#a3be8c;">Expensive Data</span><span>&quot;
+</span><span>
+</span><span style="color:#65737e;"># Example usage
+</span><span>obj = </span><span style="color:#bf616a;">ExpensiveObject</span><span>()
+</span><span style="color:#96b5b4;">print</span><span>(&quot;</span><span style="color:#a3be8c;">Object created, expensive attribute not computed yet.</span><span>&quot;)
+</span><span style="color:#65737e;"># The first access to expensive_attribute will compute and store the value
+</span><span style="color:#96b5b4;">print</span><span>(obj.expensive_attribute)  
+</span><span style="color:#65737e;"># Subsequent accesses will use the cached value
+</span><span style="color:#96b5b4;">print</span><span>(obj.expensive_attribute)
+</span></code></pre>
+<p>Very useful, somewhat tricky, I always have to re-check how to implement decorators that receive arguments, for example, which consists of the next example. Here we will also dive in to the use of decorators in order to optimize our Python code.</p>
+<p>You can create a decorator to manage shared resources with a lock (you might recognize this from other optimization libraries like Dask!):</p>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#b48ead;">from </span><span>threading </span><span style="color:#b48ead;">import </span><span>Lock
+</span><span>
+</span><span>lock = </span><span style="color:#bf616a;">Lock</span><span>()
+</span><span>
+</span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">synchronized</span><span>(</span><span style="color:#bf616a;">lock</span><span>):
+</span><span>    </span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">decorator</span><span>(</span><span style="color:#bf616a;">function</span><span>):
+</span><span>        @</span><span style="color:#bf616a;">wraps</span><span>(function)
+</span><span>        </span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">wrapper</span><span>(*</span><span style="color:#bf616a;">args</span><span>, **</span><span style="color:#bf616a;">kwargs</span><span>):
+</span><span>            </span><span style="color:#b48ead;">with </span><span>lock:
+</span><span>                </span><span style="color:#b48ead;">return </span><span style="color:#bf616a;">function</span><span>(*args, **kwargs)
+</span><span>        </span><span style="color:#b48ead;">return </span><span>wrapper
+</span><span>    </span><span style="color:#b48ead;">return </span><span>decorator
+</span><span>
+</span><span>@</span><span style="color:#bf616a;">synchronized</span><span>(lock)
+</span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">update_shared_resource</span><span>(</span><span style="color:#bf616a;">value</span><span>):
+</span><span>    </span><span style="color:#65737e;"># Update shared resource here
+</span><span>    </span><span style="color:#b48ead;">pass
+</span></code></pre>
+<p>The <code>decorator</code> function is needed as an intermediary to correctly bind the <code>lock</code> argument. Without it, you wouldn't be able to pass the <code>lock</code> to the <code>wrapper</code> because the decorator syntax <code>@</code> expects a function that takes a single function as an argument and returns a callable. You need that extra step to create a closure that captures the <code>lock</code> and uses it in the <code>wrapper</code>.</p>
+<p>If you didn't need to pass any arguments to your decorator, you could skip the factory part and define a decorator that directly returns the wrapper function. But since you want to pass the <code>lock</code>, you need this extra <code>decorator</code> function.</p>
+<p>You can also do so much more. You can abstract away the boilerplate code needed to set up parallel execution:</p>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#b48ead;">from </span><span>multiprocessing </span><span style="color:#b48ead;">import </span><span>Pool
+</span><span style="color:#b48ead;">from </span><span>functools </span><span style="color:#b48ead;">import </span><span>wraps
+</span><span>
+</span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">parallelize</span><span>(</span><span style="color:#bf616a;">function</span><span>):
+</span><span>    @</span><span style="color:#bf616a;">wraps</span><span>(function)
+</span><span>    </span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">wrapper</span><span>(*</span><span style="color:#bf616a;">args</span><span>, **</span><span style="color:#bf616a;">kwargs</span><span>):
+</span><span>        </span><span style="color:#b48ead;">with </span><span style="color:#bf616a;">Pool</span><span>(</span><span style="color:#bf616a;">processes</span><span>=</span><span style="color:#d08770;">4</span><span>) </span><span style="color:#b48ead;">as </span><span>pool:
+</span><span>            </span><span style="color:#b48ead;">return </span><span>pool.</span><span style="color:#bf616a;">map</span><span>(function, args[</span><span style="color:#d08770;">0</span><span>])  </span><span style="color:#65737e;"># Assuming the first argument is iterable.
+</span><span>    </span><span style="color:#b48ead;">return </span><span>wrapper
+</span><span>
+</span><span>@</span><span style="color:#bf616a;">parallelize
+</span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">compute_square</span><span>(</span><span style="color:#bf616a;">numbers</span><span>):
+</span><span>    </span><span style="color:#b48ead;">return </span><span>[number ** </span><span style="color:#d08770;">2 </span><span style="color:#b48ead;">for </span><span>number </span><span style="color:#b48ead;">in </span><span>numbers]
+</span><span>
+</span><span style="color:#65737e;"># When called, this will execute in parallel.
+</span><span>squares = </span><span style="color:#bf616a;">compute_square</span><span>(</span><span style="color:#96b5b4;">range</span><span>(</span><span style="color:#d08770;">10</span><span>))
+</span></code></pre>
+<p>You can cache results using Python’s <code>from functools import lru_cache</code>. </p>
+<p>You may also time an execution using decorators:</p>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#b48ead;">import </span><span>time
+</span><span>
+</span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">timeit</span><span>(</span><span style="color:#bf616a;">function</span><span>):
+</span><span>    @</span><span style="color:#bf616a;">wraps</span><span>(function)
+</span><span>    </span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">wrapper</span><span>(*</span><span style="color:#bf616a;">args</span><span>, **</span><span style="color:#bf616a;">kwargs</span><span>):
+</span><span>        start_time = time.</span><span style="color:#bf616a;">time</span><span>()
+</span><span>        result = </span><span style="color:#bf616a;">function</span><span>(*args, **kwargs)
+</span><span>        end_time = time.</span><span style="color:#bf616a;">time</span><span>()
+</span><span>        </span><span style="color:#96b5b4;">print</span><span>(</span><span style="color:#b48ead;">f</span><span>&quot;</span><span style="color:#a3be8c;">Function </span><span>{function.__name__}</span><span style="color:#a3be8c;"> took </span><span>{end_time - start_time}</span><span style="color:#a3be8c;"> seconds</span><span>&quot;)
+</span><span>        </span><span style="color:#b48ead;">return </span><span>result
+</span><span>    </span><span style="color:#b48ead;">return </span><span>wrapper
+</span><span>
+</span><span>@</span><span style="color:#bf616a;">timeit
+</span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">parallel_function</span><span>(</span><span style="color:#bf616a;">data</span><span>):
+</span><span>    </span><span style="color:#65737e;"># Code that runs in parallel
+</span><span>    </span><span style="color:#b48ead;">pass
+</span></code></pre>
+<p>That's it for this post. Hope it was useful for some people!</p>
+
+
+
+      </div> <!-- span9 -->
+
+      <div class="span3 bs-docs-sidebar">
+      
+        <h1>Search</h1>
+        <form class="form-search">
+          <input id="search" type="text" class="input-large search-query">
+        </form>
+        <div class="search-results">
+          <div class="search-results__items"></div>
+        </div>
+        <p></p>
+        <h1>Categories</h1>
+        <ul class="nav nav-list bs-docs-sidenav">
+          
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/categories/activism">activism</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/categories/journal">journal</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/categories/research">research</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/categories/tutorial">tutorial</a></li>
+          
+        </ul>
+        <p></p>
+        <h1>Tags</h1>
+        <ul class="nav nav-list bs-docs-sidenav">        
+          
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/ai">ai</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/art">art</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/books">books</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/community">community</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/counter-culture">counter-culture</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/cpp">cpp</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/data">data</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/design">design</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/electronics">electronics</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/js">js</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/learning">learning</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/lisp">lisp</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/love">love</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/performance">performance</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/privacy">privacy</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/python">python</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/rust">rust</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/security">security</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/software-tools">software-tools</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/web-dev">web-dev</a></li>
+              
+        </ul>
+      
+      </div>
+
+    </div> <!-- row -->
+  </div> <!-- container navmargin -->
+
+  <footer class="container">
+    <hr class="soften">
+    <p>
+        2023 &copy;
+        <a href="https:&#x2F;&#x2F;cyborgdream.github.io">Mari-chan</a>
+        |
+        
+        <a href="https://twitter.com/mari_meir" target="_blank">Twitter</a>
+        
+        
+        <a href="https://linkedin.com/in/mariana-meireles" target="_blank">Linkedin</a>
+        
+        
+        <a href="https://github.com/marimeireles" target="_blank">GitHub</a>
+        
+        
+        |
+        Built on <a href="https://getzola.org" target="_blank">Zola</a>
+    </p>
+  </footer>
+
+  <script src="https://cyborgdream.github.io/js/jquery.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-386.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-transition.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-alert.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-modal.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-dropdown.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-scrollspy.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-tab.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-tooltip.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-popover.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-button.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-collapse.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-carousel.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-typeahead.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-affix.js"></script>
+  <script src="https://cyborgdream.github.io/js/zola.386.js"></script>
+  <script src="https://cyborgdream.github.io/js/search.js"></script>
+  <script src="https://cyborgdream.github.io/elasticlunr.min.js"></script>
+  <script src="https://cyborgdream.github.io/search_index.en.js"></script>
+</body>
+</html>

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/Blog">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <link rel="stylesheet" href="https://cyborgdream.github.io/site.css">
+  <title>Do cyborgs dream of bionic sheep? - Threading issues in C++</title>
+  
+  
+
+  <meta name="description" itemprop="about" content="">
+  <meta name="keywords" itemprop="keywords" content="zola, theme, retro, hacking">
+  <meta name="author" itemprop="author" content="Mari-chan">
+  <meta itemprop="headline" content="Do cyborgs dream of bionic sheep?">
+  <meta itemprop="copyrightYear" content="2023">
+
+  <link rel="icon" href="https://cyborgdream.github.io/images/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="https://cyborgdream.github.io/images/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="https://cyborgdream.github.io/images/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="https://cyborgdream.github.io/images/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://cyborgdream.github.io/images/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="https://cyborgdream.github.io/images/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="https://cyborgdream.github.io/images/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="https://cyborgdream.github.io/images/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://cyborgdream.github.io/images/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://cyborgdream.github.io/images/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="https://cyborgdream.github.io/images/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://cyborgdream.github.io/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="https://cyborgdream.github.io/images/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://cyborgdream.github.io/images/favicon-16x16.png">
+  <link rel="manifest" href="https://cyborgdream.github.io/images/manifest.json">
+  <meta name="msapplication-TileColor" content="black">
+  <meta name="msapplication-TileImage" content="https://cyborgdream.github.io/images/ms-icon-144x144.png">
+  <meta name="theme-color" content="black">
+
+  <meta property="og:title" content="Do cyborgs dream of bionic sheep? - Threading issues in C++">
+  <meta property="og:description" content="25&#x2F;??? A deeper look in how things can go wrong in C++">
+  <meta property="og:url" content="https:&#x2F;&#x2F;cyborgdream.github.io/threading">
+  <meta property="og:site_name" content="Do cyborgs dream of bionic sheep?">
+  
+  <meta property="og:image" content="">
+  
+  <meta name="twitter:card" content="summary">
+  
+  <meta name="twitter:site" content="mari_meir">
+  <meta name="twitter:creator" content="mari_meir">
+  <meta name="twitter:image:alt" content="Do cyborgs dream of bionic sheep?">
+  
+
+  
+</head>
+
+<body data-spy="scroll" data-target=".bs-docs-sidebar">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"></button>
+            <a class="brand" href="https:&#x2F;&#x2F;cyborgdream.github.io">Do cyborgs dream of bionic sheep?</a>
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+                
+                
+                <li class="">
+                  <a href="https:&#x2F;&#x2F;cyborgdream.github.io/"><span>Home</span></a>
+                </li>
+                
+                <li class="">
+                  <a href="https:&#x2F;&#x2F;cyborgdream.github.io/categories"><span>Categories</span></a>
+                </li>
+                
+                <li class="">
+                  <a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags"><span>Tags</span></a>
+                </li>
+                
+                <li class="">
+                  <a href="https:&#x2F;&#x2F;cyborgdream.github.io/about"><span>About</span></a>
+                </li>
+                
+                
+              </ul>
+            </div>
+        </div>
+    </div>
+  </nav>
+
+  <div class="container navmargin">
+    <header class="jumbotron subhead" id="overview">
+      
+<p class="lead">
+  <span>&gt;&gt;</span>
+  <a href="https:&#x2F;&#x2F;cyborgdream.github.io">Home</a>
+  
+    <span class="divider">/</span>
+    <a class="category" href="https://cyborgdream.github.io/categories/journal/">journal</a>
+    <span class="divider">/</span>
+      
+        <a href="https://cyborgdream.github.io/tags/learning/">learning</a>,
+      
+        <a href="https://cyborgdream.github.io/tags/cpp/">cpp</a>,
+      
+        <a href="https://cyborgdream.github.io/tags/security/">security</a>
+      
+  
+</p>
+
+      
+<div class="page-header">
+  <h1>Threading issues in C++</h1>
+</div>
+
+      
+<p class="text-right">
+  <span class="label label-success">
+    &becaus;
+    
+      Mari-chan
+    
+  </span>
+  <span class="label label-success">&there4; 2022-03-19</span>
+  <span class="label label-success">&infin; 4'</span>
+</p>
+
+    </header>
+    
+    <div class="row-fluid">
+
+      <div class="span9 bs-docs-sidebar">
+      
+<h1 id="c-multithreading-mistakes">C++ multithreading mistakes</h1>
+<blockquote>
+<p>What's a thread and a process? </p>
+</blockquote>
+<p><strong>A process is a program under execution i.e an active program.</strong> <strong>A thread is a lightweight process that can be managed independently by a scheduler</strong>.</p>
+<blockquote>
+<p>Differences between concurrency and multithreading and parallelism.</p>
+</blockquote>
+<p>Multithreaded programs splits into two ro more threads that may execute concurrently. Each thread acts as an individual program, but they all share the same memory. Switching between threads is faster than switching between processes. Concurrency and parallelism are often considered to be equivalent, but they're not. All parallel programs are concurrent, but not all concurrent programs are parallel. Parallel computing is the simultaneous use of multiple computer resources to solve a computational problem. Each part of the problem must be independent of the others and simultaneously solvable. In other words, a concurrent program can be run in an interleaved way (where each little piece of the software run at a different time) and the parallel concurrency is when you're running something at the same time as other thread.</p>
+<h1 id="issues">Issues</h1>
+<p><strong>Race conditions:</strong> can occur in any scenario in which two threads can produce different behavior, depending on which thread completes first. They need to both have access to a common object, to run at the same time and at least one of them have to alter the state of the race object. One fix for this besides locking threads iss by creating atomic objects. Here are some doc remiders for this section:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>std::thread.join()
+</span><span>std::thread.deatch()
+</span></code></pre>
+<p><code>mutex</code>: can be used to protect shared data from being simultaneously accessed by multiple threads. A calling thread owns a mutext, from the time it locks until it calls unlock.</p>
+<p><code>lock_guard</code>: is a mutex wrapper that provides RAII for owning a mutex for the duration of a scoped block.</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>#include &lt;thread&gt;
+</span><span>#include &lt;mutex&gt;
+</span><span>#include &lt;iostream&gt;
+</span><span> 
+</span><span>int g_i = 0;
+</span><span>std::mutex g_i_mutex;  // protects g_i
+</span><span> 
+</span><span>void safe_increment()
+</span><span>{
+</span><span>    const std::lock_guard&lt;std::mutex&gt; lock(g_i_mutex);
+</span><span>    ++g_i;
+</span><span> 
+</span><span>    std::cout &lt;&lt; &quot;g_i: &quot; &lt;&lt; g_i &lt;&lt; &quot;; in thread #&quot;
+</span><span>              &lt;&lt; std::this_thread::get_id() &lt;&lt; &#39;\n&#39;;
+</span><span> 
+</span><span>    // g_i_mutex is automatically released when lock
+</span><span>    // goes out of scope
+</span><span>}
+</span><span> 
+</span><span>int main()
+</span><span>{
+</span><span>    std::cout &lt;&lt; &quot;g_i: &quot; &lt;&lt; g_i &lt;&lt; &quot;; in main()\n&quot;;
+</span><span> 
+</span><span>    std::thread t1(safe_increment);
+</span><span>    std::thread t2(safe_increment);
+</span><span> 
+</span><span>    t1.join();
+</span><span>    t2.join();
+</span><span> 
+</span><span>    std::cout &lt;&lt; &quot;g_i: &quot; &lt;&lt; g_i &lt;&lt; &quot;; in main()\n&quot;;
+</span><span>}
+</span></code></pre>
+<p>The good flux is:</p>
+<ol>
+<li>create a <code>mutex</code></li>
+<li><code>lock_guard</code> the mutex</li>
+<li>That's all, stuff will fix itself once the thread has finished its job</li>
+</ol>
+<p>But here are some interesting pitfalls that mitigation strategies can bring:</p>
+<ul>
+<li>deadlock</li>
+<li>assuming threads will
+- run in a particuclar order
+- make progress before one thread ends
+<ul>
+<li>relying on tests to find data races and deadlocks</li>
+<li>memory alllication and freeing, while it's freed in one thread the other one might still need to use it</li>
+</ul>
+</li>
+</ul>
+<p><code>std::atomic</code>: guarantee well defined behavior when being acessed by multiple threads. This is defined by <code>std::memory_order</code>.</p>
+<p><strong>deadlock</strong>: As explained earlier the way to fix race condiftions is by making threads mutually exclusive with things like locks. Deadlocks occur whenever two or more control flos block each other in a way that none can continue. Four conditions have to apply for deadlock to occur:</p>
+<ol>
+<li>mutual exclusion (at least one nonshareable resource must be held, (I don't really understand what this means))</li>
+<li>hold and wait (a thread must hold a resource while waiting for the availability of another resource)</li>
+<li>no preemption (resources can't be taken away from a thread while they're being used)</li>
+<li>circular wait (a thread must wait on another resource on another thread that by its turn is waiting on the resource of the first thread)
+To fix this issue you can lock the mutexes in a predefined order, which will prevent the circular wait issue.</li>
+</ol>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>std::atomic&lt;unsigned int&gt; BankAccount::globalId(1);
+</span><span>  
+</span><span>int deposit(BankAccount *from, BankAccount *to, int amount) {
+</span><span>  std::mutex *first;
+</span><span>  std::mutex *second;
+</span><span>  
+</span><span>  if (from-&gt;get_id() == to-&gt;get_id()) {
+</span><span>    return -1; // Indicate error
+</span><span>  }
+</span><span>  
+</span><span>  // Ensure proper ordering for locking.
+</span><span>  if (from-&gt;get_id() &lt; to-&gt;get_id()) {
+</span><span>    first = &amp;from-&gt;balanceMutex;
+</span><span>    second = &amp;to-&gt;balanceMutex;
+</span><span>  } else {
+</span><span>    first = &amp;to-&gt;balanceMutex;
+</span><span>    second = &amp;from-&gt;balanceMutex;
+</span><span>  }
+</span><span>  std::lock_guard&lt;std::mutex&gt; firstLock(*first);
+</span><span>  std::lock_guard&lt;std::mutex&gt; secondLock(*second);
+</span><span>  
+</span><span>  // Check for enough balance to transfer.
+</span><span>  if (from-&gt;get_balance() &gt;= amount) {
+</span><span>    from-&gt;set_balance(from-&gt;get_balance() - amount);
+</span><span>    to-&gt;set_balance(to-&gt;get_balance() + amount);
+</span><span>    return 0;
+</span><span>  }
+</span><span>  return -1;
+</span><span>}
+</span><span>  
+</span><span>void f(BankAccount *ba1, BankAccount *ba2) {
+</span><span>  // Perform the deposits.
+</span><span>  std::thread thr1(deposit, ba1, ba2, 100);
+</span><span>  std::thread thr2(deposit, ba2, ba1, 100);
+</span><span>  thr1.join();
+</span><span>  thr2.join();
+</span><span>}
+</span></code></pre>
+
+
+
+      </div> <!-- span9 -->
+
+      <div class="span3 bs-docs-sidebar">
+      
+        <h1>Search</h1>
+        <form class="form-search">
+          <input id="search" type="text" class="input-large search-query">
+        </form>
+        <div class="search-results">
+          <div class="search-results__items"></div>
+        </div>
+        <p></p>
+        <h1>Categories</h1>
+        <ul class="nav nav-list bs-docs-sidenav">
+          
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/categories/activism">activism</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/categories/journal">journal</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/categories/research">research</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/categories/tutorial">tutorial</a></li>
+          
+        </ul>
+        <p></p>
+        <h1>Tags</h1>
+        <ul class="nav nav-list bs-docs-sidenav">        
+          
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/ai">ai</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/art">art</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/books">books</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/community">community</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/counter-culture">counter-culture</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/cpp">cpp</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/data">data</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/design">design</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/electronics">electronics</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/js">js</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/learning">learning</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/lisp">lisp</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/love">love</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/performance">performance</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/privacy">privacy</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/python">python</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/rust">rust</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/security">security</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/software-tools">software-tools</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/web-dev">web-dev</a></li>
+              
+        </ul>
+      
+      </div>
+
+    </div> <!-- row -->
+  </div> <!-- container navmargin -->
+
+  <footer class="container">
+    <hr class="soften">
+    <p>
+        2023 &copy;
+        <a href="https:&#x2F;&#x2F;cyborgdream.github.io">Mari-chan</a>
+        |
+        
+        <a href="https://twitter.com/mari_meir" target="_blank">Twitter</a>
+        
+        
+        <a href="https://linkedin.com/in/mariana-meireles" target="_blank">Linkedin</a>
+        
+        
+        <a href="https://github.com/marimeireles" target="_blank">GitHub</a>
+        
+        
+        |
+        Built on <a href="https://getzola.org" target="_blank">Zola</a>
+    </p>
+  </footer>
+
+  <script src="https://cyborgdream.github.io/js/jquery.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-386.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-transition.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-alert.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-modal.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-dropdown.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-scrollspy.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-tab.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-tooltip.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-popover.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-button.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-collapse.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-carousel.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-typeahead.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-affix.js"></script>
+  <script src="https://cyborgdream.github.io/js/zola.386.js"></script>
+  <script src="https://cyborgdream.github.io/js/search.js"></script>
+  <script src="https://cyborgdream.github.io/elasticlunr.min.js"></script>
+  <script src="https://cyborgdream.github.io/search_index.en.js"></script>
+</body>
+</html>
