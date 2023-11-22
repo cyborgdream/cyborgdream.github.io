@@ -13,12 +13,6 @@ tags = ["community"]
 comments = true
 +++
 
-The software career. One of the freest industries out there.
-
-Where else could you hold a serious blog on sex toys and still have your career intact? (The sex industry, I guess...) Of course these privileges only fall upon male -because everyone is so interested on women's in tech personal life- but still, it's a wonder to see and be part of it in some extent.
-
-This whole topic about how much work control people's personal choices is interesting to me.
-
 Can you be sexist and still be in the managing board of the biggest open source OS out there? Are you too powerful and your views are harmful and unfair to the non-male population and that's why you should be removed?
 
 I'm reading The righteous mind and the author says that the reason why we come up with moral justifications is not for ourselves, but to convince others of our points of views.
