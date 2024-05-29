@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/Blog">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <link rel="stylesheet" href="https://cyborgdream.github.io/site.css">
+  <title>Do cyborgs dream of bionic sheep? - Packaging in different systems</title>
+  
+  
+
+  <meta name="description" itemprop="about" content="">
+  <meta name="keywords" itemprop="keywords" content="zola, theme, retro, hacking">
+  <meta name="author" itemprop="author" content="Mari-chan">
+  <meta itemprop="headline" content="Do cyborgs dream of bionic sheep?">
+  <meta itemprop="copyrightYear" content="2023">
+
+  <link rel="icon" href="https://cyborgdream.github.io/images/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="https://cyborgdream.github.io/images/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="https://cyborgdream.github.io/images/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="https://cyborgdream.github.io/images/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://cyborgdream.github.io/images/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="https://cyborgdream.github.io/images/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="https://cyborgdream.github.io/images/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="https://cyborgdream.github.io/images/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://cyborgdream.github.io/images/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://cyborgdream.github.io/images/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="https://cyborgdream.github.io/images/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://cyborgdream.github.io/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="https://cyborgdream.github.io/images/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://cyborgdream.github.io/images/favicon-16x16.png">
+  <link rel="manifest" href="https://cyborgdream.github.io/images/manifest.json">
+  <meta name="msapplication-TileColor" content="black">
+  <meta name="msapplication-TileImage" content="https://cyborgdream.github.io/images/ms-icon-144x144.png">
+  <meta name="theme-color" content="black">
+
+  <meta property="og:title" content="Do cyborgs dream of bionic sheep? - Packaging in different systems">
+  <meta property="og:description" content="General tips for packaging in various operational systems, special Q&amp;A for conda">
+  <meta property="og:url" content="https:&#x2F;&#x2F;cyborgdream.github.io/nuggets-packaging">
+  <meta property="og:site_name" content="Do cyborgs dream of bionic sheep?">
+  
+  <meta property="og:image" content="">
+  
+  <meta name="twitter:card" content="summary">
+  
+  <meta name="twitter:site" content="mari_meir">
+  <meta name="twitter:creator" content="mari_meir">
+  <meta name="twitter:image:alt" content="Do cyborgs dream of bionic sheep?">
+  
+
+  
+</head>
+
+<body data-spy="scroll" data-target=".bs-docs-sidebar">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"></button>
+            <a class="brand" href="https:&#x2F;&#x2F;cyborgdream.github.io">Do cyborgs dream of bionic sheep?</a>
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+                
+                
+                <li class="">
+                  <a href="https:&#x2F;&#x2F;cyborgdream.github.io/"><span>Home</span></a>
+                </li>
+                
+                <li class="">
+                  <a href="https:&#x2F;&#x2F;cyborgdream.github.io/categories"><span>Categories</span></a>
+                </li>
+                
+                <li class="">
+                  <a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags"><span>Tags</span></a>
+                </li>
+                
+                <li class="">
+                  <a href="https:&#x2F;&#x2F;cyborgdream.github.io/about"><span>About</span></a>
+                </li>
+                
+                
+              </ul>
+            </div>
+        </div>
+    </div>
+  </nav>
+
+  <div class="container navmargin">
+    <header class="jumbotron subhead" id="overview">
+      
+<p class="lead">
+  <span>&gt;&gt;</span>
+  <a href="https:&#x2F;&#x2F;cyborgdream.github.io">Home</a>
+  
+    <span class="divider">/</span>
+    <a class="category" href="https://cyborgdream.github.io/categories/tutorial/">tutorial</a>
+    <span class="divider">/</span>
+      
+        <a href="https://cyborgdream.github.io/tags/software-tools/">software-tools</a>
+      
+  
+</p>
+
+      
+<div class="page-header">
+  <h1>Packaging in different systems</h1>
+</div>
+
+      
+<p class="text-right">
+  <span class="label label-success">
+    &becaus;
+    
+      Mari-chan
+    
+  </span>
+  <span class="label label-success">&there4; 2023-11-22</span>
+  <span class="label label-success">&infin; 10'</span>
+</p>
+
+    </header>
+    
+    <div class="row-fluid">
+
+      <div class="span9 bs-docs-sidebar">
+      
+<p>This is part of a series where I write down things I know or I've learned while trying to keep myself sharp in various subjects that I don't use so often anymore.</p>
+<p>This post is quite sparsely structured however due to the lack of posts about the subject of packaging and specifically about how to handle weird conda-forge things, I thought it might be useful for someone anyway!</p>
+<ul>
+<li>Operating System and CPU architecture</li>
+</ul>
+<p>A given package will only work for a given architecture. Packages compiled to macOS Intel x86 won’t work in the M1 architecture’s ARM64, for example.</p>
+<ul>
+<li>Solving linking problems
+<ul>
+<li>
+<p>Dynamically linked libraries contain functions, classes, variables, and resources that can be used by multiple programs simultaneously. This promotes code reuse and efficient memory usage. They enable 'dynamic linking' where the linking happens at run time when both executable files and libraries are loaded into memory.</p>
+<ul>
+<li>.dylib is OSX, .so is LINUX and .dll on Windows</li>
+</ul>
+</li>
+<li>
+<p><code>ldd</code> and <code>nm</code> are used to work with binary files. <code>otool</code> is the OSX tool</p>
+<ul>
+<li>
+<p>The <code>ldd</code> command prints the shared libraries required by each program or shared library passed to it.</p>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span>ldd /path/to/program
+</span></code></pre>
+</li>
+<li>
+<p><code>nm</code> is used to inspect the symbols within object files or binaries and is available as part of the GNU binutils package.</p>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span>nm /path/to/object_file
+</span></code></pre>
+<ul>
+<li><strong>Find Symbol Definitions</strong>: You can use <code>nm</code> to find out whether a symbol is defined or used in an object file, and whether the symbol is exported (global) or static.</li>
+<li><strong>Debugging Linking Issues</strong>: <code>nm</code> is useful for debugging linking problems by showing which symbols are undefined or multiple defined in an object file.</li>
+<li><strong>Optimizing Builds</strong>: By examining the symbols, developers can get insights into how to optimize their build (for example, by removing unused static functions)</li>
+</ul>
+</li>
+<li>
+<p><code>otool -L</code> to achieve similar functionality to <code>ldd</code> on macOS. This command lists the dynamic library dependencies of a binary.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>In the context of compiled languages like C and C++, symbols refer to these entities (function, classes, variables..) once the code has been compiled into object files (.o), static libraries (.a), shared libraries (.so, .dylib, etc.), or executables.</p>
+<ul>
+<li><strong>Undefined Symbols</strong>: These are symbols that are referenced in an object file but are defined in a different objec file  or library. They are one of the main causes of linking errors.</li>
+</ul>
+<p><strong>Object Files (.o/.obj)</strong></p>
+<ul>
+<li><strong>Creation</strong>: Generated by the compiler when you compile a C/C++ source file without linking it.</li>
+<li><strong>Purpose</strong>: They contain the compiled code of individual source files in a form that can be handled by the linker.</li>
+<li><strong>Usage</strong>: Object files are the building blocks that are put together to create either a static library, shared library, or an executable.</li>
+</ul>
+<p><strong>Static Libraries (.a/.lib)</strong></p>
+<ul>
+<li><strong>Creation</strong>: Created by the archiver tool (like <code>ar</code> in Unix) from one or more object files.</li>
+<li><strong>Purpose</strong>: They serve as a single package of multiple object files, allowing for easier distribution and re-use of library code.</li>
+<li><strong>Usage</strong>: When you link an application with a static library, the contents of the library are copied into the final executable, resulting in no runtime dependency on the library.</li>
+</ul>
+<p><strong>Shared Libraries (.so/.dylib/.dll)</strong></p>
+<ul>
+<li><strong>Creation</strong>: Produced by the linker when building a library that is meant to be shared between multiple executables.</li>
+<li><strong>Purpose</strong>: Contain code and data that can be used by multiple executables simultaneously, promoting code reuse and reducing the memory footprint of applications.</li>
+<li><strong>Usage</strong>: At runtime, the OS loads the shared library into memory, and different programs can use its code and data without having to have their own copy. This requires that the shared library is available during the runtime on the system where the executable is run.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Questions and answers:</strong></p>
+<ol>
+<li>
+<p>How does the operating system use shared libraries at runtime?</p>
+<ul>
+<li>The executable has a list of required libs. The OS gets the paths and loads them into memory. If multiple apps use the same lib they share the in-memory copy.</li>
+</ul>
+</li>
+<li>
+<p>What must be ensured for a shared library to be used by an executable at runtime?</p>
+<ul>
+<li>The library must be available on the system where the executable is run, typically in a directory known to the dynamic linker (e.g., specified in <code>LD_LIBRARY_PATH</code> on Linux).</li>
+<li>The version of the shared library must be compatible with what the executable was built against.</li>
+<li>Proper permissions must be set on the shared library so that the user running the executable has the rights to read and execute it.</li>
+</ul>
+</li>
+<li>
+<p>Explain the implication of linking an application with a static library for the final executable. How is this achieved?</p>
+<ul>
+<li>When an application is linked with a static library, the contents of the static library are incorporated directly into the final executable during the linking phase. This increases the size of the executable since it now contains the library code within it. The implication is that the final executable is larger but self-contained, meaning it doesn't rely on external libraries at runtime. This is achieved using a linker tool that combines object files and static libraries into a single executable binary.</li>
+</ul>
+</li>
+<li>
+<p>How are object files used in creating an executable?</p>
+<ul>
+<li>Object files are the result of compiling source code files. During the linking phase, a linker tool takes these object files and combines them, resolving any references or symbols between them (such as function calls or global variables). The linker also includes code from libraries that the application depends on. The result of this process is a single executable file that can be run on the operating system.</li>
+</ul>
+</li>
+<li>
+<p>What are the benefits of using dynamically linked libraries over statically linked libraries?</p>
+<ul>
+<li><strong>Reduced Memory Usage</strong>: Since shared libraries can be loaded into memory once and shared between multiple running applications, they can reduce the overall memory footprint.</li>
+<li><strong>Smaller Executables</strong>: Executables that use dynamic libraries are smaller because they don't contain the library code—they only contain references to the shared libraries.</li>
+<li><strong>Easier Updates</strong>: Shared libraries can be updated independently of the executables that use them, allowing for bug fixes and updates without having to recompile the executables.</li>
+<li><strong>Modularity</strong>: Dynamic linking promotes modularity, as developers can split their applications into separate components that are easier to manage and update.</li>
+<li><strong>Resource Sharing</strong>: Resources like memory and disk space are used more efficiently because the shared code is not duplicated across multiple executables.</li>
+</ul>
+</li>
+<li>
+<p>How to create a pip package with a fair load of c++ code on it?</p>
+<ul>
+<li>First create the package structure. Use a tool that will allow you to create a Python-callable interface to the c++ code, kike cython or pybind11.</li>
+<li>Then create a <a href="http://setup.py">setup.py</a> file that in this case will use <code>setuptools</code></li>
+</ul>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span>ext_modules = [
+</span><span>    </span><span style="color:#bf616a;">Extension</span><span>(
+</span><span>        &#39;</span><span style="color:#a3be8c;">my_module.my_cpp_extension</span><span>&#39;,  </span><span style="color:#65737e;"># Name of the module
+</span><span>        [&#39;</span><span style="color:#a3be8c;">my_module/my_cpp_extension.cpp</span><span>&#39;],  </span><span style="color:#65737e;"># C++ source files
+</span><span>        </span><span style="color:#bf616a;">include_dirs</span><span>=[
+</span><span>            </span><span style="color:#bf616a;">get_pybind_include</span><span>(),  </span><span style="color:#65737e;"># Path to pybind11 headers
+</span><span>            &#39;</span><span style="color:#a3be8c;">/usr/include/eigen3</span><span>&#39;,  </span><span style="color:#65737e;"># Path to other headers needed
+</span><span>        ],
+</span><span>        </span><span style="color:#bf616a;">language</span><span>=&#39;</span><span style="color:#a3be8c;">c++</span><span>&#39;
+</span><span>    ),
+</span><span>]
+</span><span>
+</span><span style="color:#bf616a;">setup</span><span>(
+</span><span>    </span><span style="color:#bf616a;">name</span><span>=&#39;</span><span style="color:#a3be8c;">my_package</span><span>&#39;,
+</span><span>    </span><span style="color:#bf616a;">version</span><span>=&#39;</span><span style="color:#a3be8c;">0.0.1</span><span>&#39;,
+</span><span>    </span><span style="color:#bf616a;">author</span><span>=&#39;</span><span style="color:#a3be8c;">Your Name</span><span>&#39;,
+</span><span>    </span><span style="color:#bf616a;">author_email</span><span>=&#39;</span><span style="color:#a3be8c;">your.email@example.com</span><span>&#39;,
+</span><span>    </span><span style="color:#bf616a;">url</span><span>=&#39;</span><span style="color:#a3be8c;">https://github.com/yourusername/my_package</span><span>&#39;,
+</span><span>    </span><span style="color:#bf616a;">description</span><span>=&#39;</span><span style="color:#a3be8c;">A minimal package with a C++ extension</span><span>&#39;,
+</span><span>    </span><span style="color:#bf616a;">long_description</span><span>=&#39;&#39;,
+</span><span>    </span><span style="color:#bf616a;">ext_modules</span><span>=ext_modules,
+</span><span>    </span><span style="color:#bf616a;">install_requires</span><span>=[&#39;</span><span style="color:#a3be8c;">pybind11&gt;=2.5.0</span><span>&#39;],  </span><span style="color:#65737e;"># Depend on pybind11
+</span><span>    </span><span style="color:#bf616a;">setup_requires</span><span>=[&#39;</span><span style="color:#a3be8c;">pybind11&gt;=2.5.0</span><span>&#39;],
+</span><span>    </span><span style="color:#bf616a;">cmdclass</span><span>={&#39;</span><span style="color:#a3be8c;">build_ext</span><span>&#39;: build_ext},
+</span><span>    </span><span style="color:#bf616a;">zip_safe</span><span>=</span><span style="color:#d08770;">False</span><span>,
+</span><span>)
+</span></code></pre>
+<ul>
+<li>Build the package <code>pip install setuptools wheel</code> and then compile it <code>python setup.py build_ext --inplace</code>. This will generate shared objects. The kinds of objects that will be generated are platform specific.</li>
+<li>To distribute the package use <code>python [setup.py](http://setup.py/) sdist bdist_wheel</code> to create a wheel and twine to distribute it</li>
+</ul>
+</li>
+<li>
+<p>What is a wheel? And what’s an egg?</p>
+<ul>
+<li>A wheel is a built package that can be installed without a separate build step.</li>
+<li>Eggs are older. They’re deprecated and I don’t know how to use them.</li>
+<li>There are also sdists: archives that contain the source code of the Python package.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<p>Describing each option from a <code>meta.yml</code> file:</p>
+<ul>
+<li>What is the host session?</li>
+</ul>
+<p><strong>Host</strong>: The &quot;host&quot; environment contains the dependencies that your package will link against during the build process. When you’re cross-compiling your package you want to make sure that the target system has all the libraries necessary to build your software in their OS. The dependencies that need to be present for the package to compile or run during the build process. These are typically included when the package is installed by an end-user, as they are required for the package to function correctly.</p>
+<p>This is where the build scripts will look for dependencies to link against or execute during the build process. If you're not cross-compiling, the &quot;host&quot; and &quot;build&quot; platforms are the same.</p>
+<p><strong>Use selectors in <code>meta.yaml</code></strong>:
+You can use selectors like <code># [win]</code> or <code># [linux]</code> to include dependencies or run scripts conditionally depending on the platform. Here's a simple example:</p>
+<pre data-lang="yaml" style="background-color:#2b303b;color:#c0c5ce;" class="language-yaml "><code class="language-yaml" data-lang="yaml"><span style="color:#bf616a;">requirements</span><span>:
+</span><span>  </span><span style="color:#bf616a;">host</span><span>:
+</span><span>    - </span><span style="color:#a3be8c;">toolchain  </span><span style="color:#65737e;"># [linux]
+</span><span>    - </span><span style="color:#a3be8c;">m2-make  </span><span style="color:#65737e;"># [win]
+</span><span>
+</span></code></pre>
+<ul>
+<li>
+<p>Can I have pip packages, or conda packages from other channels on my recipe?</p>
+<p>As a general rule: all dependencies have to be packaged by conda-forge as well. This is necessary to assure <a href="https://conda-forge.org/docs/misc/00_intro.html#term-ABI">ABI</a> compatibility for all our packages.</p>
+<p>Some dependencies are so close to the system that they are not packaged with conda-forge.
+These dependencies have to be satisfied with <em>Core Dependency Tree</em> (CDT) packages.</p>
+<p>A CDT package consists of repackaged CentOS binaries from the appropriate version,
+either 6 or 7 depending on user choice and platform. We manage the build of CDT
+packages using a centralized repo, <a href="https://github.com/conda-forge/cdt-builds">conda-forge/cdt-builds</a>,
+as opposed to generating feedstocks for them. (Note that historically we did use feedstocks but this
+practice has been deprecated.) To add a new CDT, make a PR on the
+<a href="https://github.com/conda-forge/cdt-builds">conda-forge/cdt-builds</a> repo.</p>
+</li>
+<li>
+<p>What the hell does this cross-compilation stuff is about anyway?</p>
+</li>
+</ul>
+<p>Cross-compilation is a technique where you compile a program on one type of system (the host) to run on another type (the target). Cross-compilation is more commonly used when targeting a platform that is not easily accessible or when the build process is much faster or more convenient in this platform. For example:</p>
+<p>Embedded systems often use processors with different architectures than those in the developers' own computers. For instance, a developer might be using an x86_64 architecture computer but needs to build an application for an ARM architecture-based embedded system, like a Raspberry Pi or a smartphone.</p>
+<p>Here's how it works in this scenario:</p>
+<ul>
+<li><strong>Development Machine:</strong> The developer has a powerful x86_64 machine running Linux, macOS, or Windows.</li>
+<li><strong>Target Platform:</strong> The application needs to run on an ARM-based device, which has less computing power and might not be suitable for efficient development and compilation.</li>
+</ul>
+<p>The developer will use a cross-compiler on their x86_64 machine that generates executable code for the ARM architecture. This allows the developer to take advantage of the more powerful development machine, speeding up the compile-test-debug cycle. Once the application is ready, the executable can be transferred to the ARM-based device for execution.</p>
+<p>Cross-compilation is often faster than native compilation in such cases because the development machine has more resources (CPU, memory, etc.) than the target device. It also avoids the need to set up a full development environment on the target device, which might be constrained in terms of resources or might not be designed for such tasks.</p>
+
+
+
+      </div> <!-- span9 -->
+
+      <div class="span3 bs-docs-sidebar">
+      
+        <h1>Search</h1>
+        <form class="form-search">
+          <input id="search" type="text" class="input-large search-query">
+        </form>
+        <div class="search-results">
+          <div class="search-results__items"></div>
+        </div>
+        <p></p>
+        <h1>Categories</h1>
+        <ul class="nav nav-list bs-docs-sidenav">
+          
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/categories/activism">activism</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/categories/journal">journal</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/categories/research">research</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/categories/tutorial">tutorial</a></li>
+          
+        </ul>
+        <p></p>
+        <h1>Tags</h1>
+        <ul class="nav nav-list bs-docs-sidenav">        
+          
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/ai">ai</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/art">art</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/books">books</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/community">community</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/counter-culture">counter-culture</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/cpp">cpp</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/data">data</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/design">design</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/electronics">electronics</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/js">js</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/learning">learning</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/lisp">lisp</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/love">love</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/performance">performance</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/privacy">privacy</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/python">python</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/rust">rust</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/security">security</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/software-tools">software-tools</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/web-dev">web-dev</a></li>
+              
+        </ul>
+      
+      </div>
+
+    </div> <!-- row -->
+  </div> <!-- container navmargin -->
+
+  <footer class="container">
+    <hr class="soften">
+    <p>
+        2023 &copy;
+        <a href="https:&#x2F;&#x2F;cyborgdream.github.io">Mari-chan</a>
+        |
+        
+        <a href="https://twitter.com/mari_meir" target="_blank">Twitter</a>
+        
+        
+        <a href="https://linkedin.com/in/mariana-meireles" target="_blank">Linkedin</a>
+        
+        
+        <a href="https://github.com/marimeireles" target="_blank">GitHub</a>
+        
+        
+        |
+        Built on <a href="https://getzola.org" target="_blank">Zola</a>
+    </p>
+  </footer>
+
+  <script src="https://cyborgdream.github.io/js/jquery.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-386.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-transition.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-alert.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-modal.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-dropdown.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-scrollspy.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-tab.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-tooltip.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-popover.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-button.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-collapse.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-carousel.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-typeahead.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-affix.js"></script>
+  <script src="https://cyborgdream.github.io/js/zola.386.js"></script>
+  <script src="https://cyborgdream.github.io/js/search.js"></script>
+  <script src="https://cyborgdream.github.io/elasticlunr.min.js"></script>
+  <script src="https://cyborgdream.github.io/search_index.en.js"></script>
+</body>
+</html>

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/Blog">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <link rel="stylesheet" href="https://cyborgdream.github.io/site.css">
+  <title>Do cyborgs dream of bionic sheep? - This is a journey into HTTP2</title>
+  
+  
+
+  <meta name="description" itemprop="about" content="">
+  <meta name="keywords" itemprop="keywords" content="zola, theme, retro, hacking">
+  <meta name="author" itemprop="author" content="Mari-chan">
+  <meta itemprop="headline" content="Do cyborgs dream of bionic sheep?">
+  <meta itemprop="copyrightYear" content="2023">
+
+  <link rel="icon" href="https://cyborgdream.github.io/images/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="https://cyborgdream.github.io/images/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="https://cyborgdream.github.io/images/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="https://cyborgdream.github.io/images/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://cyborgdream.github.io/images/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="https://cyborgdream.github.io/images/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="https://cyborgdream.github.io/images/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="https://cyborgdream.github.io/images/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://cyborgdream.github.io/images/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://cyborgdream.github.io/images/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="https://cyborgdream.github.io/images/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://cyborgdream.github.io/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="https://cyborgdream.github.io/images/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://cyborgdream.github.io/images/favicon-16x16.png">
+  <link rel="manifest" href="https://cyborgdream.github.io/images/manifest.json">
+  <meta name="msapplication-TileColor" content="black">
+  <meta name="msapplication-TileImage" content="https://cyborgdream.github.io/images/ms-icon-144x144.png">
+  <meta name="theme-color" content="black">
+
+  <meta property="og:title" content="Do cyborgs dream of bionic sheep? - This is a journey into HTTP2">
+  <meta property="og:description" content="All I learned about HTTP2 in my Mozilla internship. This used to be a three parts blogpost but I condensed everything here.">
+  <meta property="og:url" content="https:&#x2F;&#x2F;cyborgdream.github.io/http2">
+  <meta property="og:site_name" content="Do cyborgs dream of bionic sheep?">
+  
+  <meta property="og:image" content="">
+  
+  <meta name="twitter:card" content="summary">
+  
+  <meta name="twitter:site" content="mari_meir">
+  <meta name="twitter:creator" content="mari_meir">
+  <meta name="twitter:image:alt" content="Do cyborgs dream of bionic sheep?">
+  
+
+  
+</head>
+
+<body data-spy="scroll" data-target=".bs-docs-sidebar">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"></button>
+            <a class="brand" href="https:&#x2F;&#x2F;cyborgdream.github.io">Do cyborgs dream of bionic sheep?</a>
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+                
+                
+                <li class="">
+                  <a href="https:&#x2F;&#x2F;cyborgdream.github.io/"><span>Home</span></a>
+                </li>
+                
+                <li class="">
+                  <a href="https:&#x2F;&#x2F;cyborgdream.github.io/categories"><span>Categories</span></a>
+                </li>
+                
+                <li class="">
+                  <a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags"><span>Tags</span></a>
+                </li>
+                
+                <li class="">
+                  <a href="https:&#x2F;&#x2F;cyborgdream.github.io/about"><span>About</span></a>
+                </li>
+                
+                
+              </ul>
+            </div>
+        </div>
+    </div>
+  </nav>
+
+  <div class="container navmargin">
+    <header class="jumbotron subhead" id="overview">
+      
+<p class="lead">
+  <span>&gt;&gt;</span>
+  <a href="https:&#x2F;&#x2F;cyborgdream.github.io">Home</a>
+  
+    <span class="divider">/</span>
+    <a class="category" href="https://cyborgdream.github.io/categories/tutorial/">tutorial</a>
+    <span class="divider">/</span>
+      
+        <a href="https://cyborgdream.github.io/tags/performance/">performance</a>,
+      
+        <a href="https://cyborgdream.github.io/tags/web-dev/">web-dev</a>
+      
+  
+</p>
+
+      
+<div class="page-header">
+  <h1>This is a journey into HTTP2</h1>
+</div>
+
+      
+<p class="text-right">
+  <span class="label label-success">
+    &becaus;
+    
+      Mari-chan
+    
+  </span>
+  <span class="label label-success">&there4; 2018-12-20</span>
+  <span class="label label-success">&infin; 19'</span>
+</p>
+
+    </header>
+    
+    <div class="row-fluid">
+
+      <div class="span9 bs-docs-sidebar">
+      
+<p>As a performance intern working with the Webcompat team part of my initial proposal was to update the Webcompat server to HTTP/2. But what is HTTP/2? What's the difference between HTTP/1.1, HTTPS and HTTP/2? Newer is always better? How should I know if I should implement it on my website? We'll dive in into the basics and I'll give you the building blocks to understand a little bit about internet protocols and in later articles I'll introduce you to my process of analysis and implementation of an HTTP/2 server focused on improving Webcompat's website performance, hopefully that will give you some insights about how to improve your own server performance.</p>
+<p>HTTP/1.1 stands for Hypertext Transfer Protocol version 1.1 and it's a standardized way of computers talk to each other through hyperlinks. HTTP/1.1 defines <strong>methods</strong> like GET that retrieves data and POST that sends it, those requests and responses have to be treated synchronous opening one TCP connection for each one of them, which might slow things a bit; HTTP/1.1 implements <strong>status</strong> there are responses to the methods like 404 not found or 200 that means that a request was successful;and HTTP <strong>header</strong> fields, which sometimes can be used to fetch data with the HEAD method. HTTP is stateless, which means there is no link between two requests being successively carried out on the same connection, sometimes you may to have a &quot;memory&quot; to store preferences of an user or a cart on an e-commerce and for that HTTP implements <strong>cookies</strong>. HTTP also defines <strong>caching</strong>, a very relevant tool for performance. Caching is the way to save data locally in order to decrease the number of requests you have to make to another computer, W3C offers <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html">extensive documentation</a> about it. If you want to get a deeper understanding on how HTTP/1.1 works MDN has this <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview">great overview article</a> about it, you can follow up the links, I recommend reading the entire section.</p>
+<p><img src="/assets/blog/http-1.png" alt="http11" /></p>
+<p><a href="https://blog.cloudflare.com/http-2-for-web-developers/">source: cloudflare</a></p>
+<p>HTTPS is a safer way to transfer data between computers. HTTPS websites encrypts the data you send and receive using TLS/SSL and the websites have to be certified by authorities on the internet that ensures that you are exchanging information with who you think you are, here is a link if you're interested in learning more about HTTPS. When we're talking about performance it seems obvious that HTTPS will have a bigger cost than HTTP because of the extra encrypting process, but according to this website's tests their results are pretty similar with HTTPS being <a href="https://www.tunetheweb.com/blog/http-versus-https-versus-http2/">approximately 1% slower than HTTP</a>.</p>
+<p>Finally, HTTP/2 implements the same tools that HTTP/1.1 does, but on top of that it has some sweet new stuff. HTTP/2 as opposed to HTTP/1.1 is a multiplexed protocol which means it can handle parallel requests, that often means your page will load faster; it's implemented with a binary protocol which allows the use of improved optimization techniques; it compresses headers; and it allows a server to populate data in a client cache, in advance of it being required, through a mechanism called the server push. Besides that, all of the browsers only support HTTP/2 if they're over TLS which means HTTP/2 websites are always encrypted.</p>
+<p><img src="/assets/blog/http-compare.png" alt="http-compare" /></p>
+<p><a href="https://blog.cloudflare.com/http-2-for-web-developers/">source: cloudflare</a></p>
+<p>These are the basic differences between the three protocols. Now that you have your feet wet on the water it's time to learn how to run analysis and find out if HTTP/2 is good for you.</p>
+<p>In my <a href="https://psychonautgirl.space/blog/2018/12/20/journey-into-http2-building-blocks.html">previous blog post</a> I gave a small introduction to the main differences between the HTTP protocol versions. In this article I want to help you understand if you need HTTP/2 on your website. If you decide you do you can keep following this series of blog posts where I'll upgrade my own website and where I try in the best of my ability to give you some neat tips on how to analyse and upgrade yours!</p>
+<h3 id="is-http-2-worth-it">Is HTTP/2 worth it?</h3>
+<p>Even though using HTTP/2 is broadly advertised on the internet as the best possible option I don't believe it fits everybody needs. Here are some things to consider if implementing HTTP/2 is worth it for you:</p>
+<ul>
+<li>
+<p>It's not supported by older browsers. You can check <a href="https://caniuse.com/#search=http2">here</a> which browsers support HTTP/2. If you know your user base accesses your website mainly from these browsers, it might not be worth it. Maybe it'll be a better use of your time to look for optimizations for HTTP/1.1, those can help a lot;</p>
+</li>
+<li>
+<p>It's not supported by some web servers. You should check if your current server supports HTTP/2, <a href="https://github.com/http2/http2-spec/wiki/Implementations">here</a> is an updated list on which servers currently support it;</p>
+</li>
+<li>
+<p>It's not supported by some content delivery networks. You should check it either by looking at their website or checking this <a href="https://en.wikipedia.org/wiki/HTTP/2#Content_delivery_networks">list</a>;</p>
+</li>
+<li>
+<p>Upgrading your whole ecosystem to run a HTTP/2 server might mean you'll spend a lot of time/money. Besides upgrading your web server and your content delivery network, you might also need to buy a certificate, you can find more information about it <a href="https://letsencrypt.org/getting-started/">here</a>;</p>
+</li>
+<li>
+<p>You can <a href="https://support.google.com/webmasters/answer/6033049">upgrade your HTTP/1.1 server to HTTPS</a>, so access to HTTPS alone is not a good reason to upgrade to HTTP/2. HTTP/2 isn't intrisically safe and this <a href="https://queue.acm.org/detail.cfm?id=2716278">article</a> goes over some reasons why;</p>
+</li>
+<li>
+<p>Updating your web server might mean only a small improvement on loading time and sometimes it might mean a loss in performance. I've seen this happening in some cases while <a href="https://psychonautgirl.space/webcompat.html#HTTP-2">analysing webcompat.com with HTTP/2</a>, and <a href="https://dev.to/david_j_eddy/is-http2-really-worth-it-1m2e">other</a> <a href="https://blog.fortrabbit.com/http2-reality-check">people</a> have seen the same. The only way to find out if it's going to be worth it for your website is by running a lot of tests.</p>
+</li>
+</ul>
+<p>If you think all of the points above aren't a real issue for you - or if you're willing to deal with them, let's dive in to how to analyze your website! In my next post I'll show you the methods and tools I used to analyze staging.webcompat.com and hopefully this real life example will help you to improve the performance of your own website.</p>
+<p>This post is the continuation of the series “This is a journey in to HTTP/2”, you’ll find the first post where I talk about the difference between HTTP protocols <a href="https://medium.com/@electrika01/this-is-a-journey-into-http-2-building-blocks-cba57a1e924c">here</a> and the second one where I advise whether you should or not use HTTP/2 on your own website <a href="https://psychonautgirl.space/blog/2019/01/01/journey-into-http2-should-i-use-it.html">here</a>. On this post we’ll explore how to find the configuration that fits your needs. Better than giving you a formula that might or might not work for you I’ll try to show you how to find the result that’s going to be optimal for your website.</p>
+<h2 id="initial-setup">Initial setup</h2>
+<p>There are a lot of tools out there to help you evaluate your website’s performance. Here I decided to use Firefox DevTools, Chrome DevTools and <a href="https://www.sitespeed.io/">sitespeed.io</a> by Wikimedia. Why these tools? They’re simple, easy to use, very customizable and they will cover a representative part of what HTTP/2 is doing in our website. Besides that Firefox, and Sitespeed offer a wide set of awesome open source tools and as a conscious developer that fights for the free web you should contribute with these companies by using them. To run tests on your computer use a real mobile device if you can, I recommend using a Nexus 5. If you don’t have a Nexus 5 at your disposal any mid-range device will do, this <a href="https://twitter.com/katiehempenius/statuses/1067969800205422593">list</a> might help you to find something. Concerning internet speed I advise you to use a 5mbps internet connection. If you have a slower internet connection at your disposal it’s fine to run the tests with a lower speed, just remember to use a tool like <a href="https://www.sitespeed.io/documentation/throttle/">Throttle</a> to establish a speed your internet supports. Note that if you have an internet speed faster than 5mbps you will also need to throttle it down. To run tests on mobile I believe the 3g slow speed or 300kbps is a good one. You can check how much speed you have at your disposal looking at <a href="https://fast.com/">fast.com</a> and if you’re still feeling insecure about how your network is behaving you can use a tool like <a href="https://www.wireshark.org/">Wireshark</a> to monitor it closer.</p>
+<p>If you’re not comfortable with these tools Google has a great <a href="https://developers.google.com/web/tools/chrome-devtools/">doc</a> about how to use DevTools and Firefox <a href="https://developer.mozilla.org/en-US/docs/Tools">too</a>, Sitespeed also have some fine <a href="http://sitespeed.io/documentation/">docs</a>. If you don’t want to learn this kind of thing right now and just jump straight away for the tests and results you can try using <a href="http://webpagetest.org/">WebPageTest</a>, it’s great tool and it’s also open source 🎔. WebPageTest is not as customizable as the tools I first advised you to use, but it’s possible to change a lot of settings on the website, so if you’re looking for simpler tests you should go have a look, it’s really a great tool. I recommend the same settings as I did before: using Nexus 5 for running tests with a slow 3g connection and Chrome and Firefox with a 5mbps connection.</p>
+<p>I recommend you to use this setup because according to my <a href="https://psychonautgirl.space/webcompat.html#Nexus-5">previous research</a> Nexus 5 represents the average setup of a mobile nowadays and the internet speeds also represents the average speed connection throughout the world. If you have more accurate statistics for your main users go ahead and use them!</p>
+<p>To clarify things here this is the setup I’m using:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>Server: ngnix 1.14.2
+</span><span>Desktop: MacBook Pro 2018 Mojave
+</span><span>Mobile: Nexus 5 Android 7
+</span><span>Internet speed: 2mbps/300kbps
+</span></code></pre>
+<p>P.S.: I have to use 2mbps to run my tests because my internet is currently that bad.</p>
+<h2 id="defining-priorities">Defining priorities</h2>
+<p>Performance is about an ocean, you can swim for miles in a lot of different directions but if you don’t focus chances are you’ll be lost in a sea of testing and hardly any insights or improves will come out from there.</p>
+<p><img src="/assets/blog/time-cost-xkcd.png" alt="xkcd" /></p>
+<p>source: <a href="http://xkcd.com/">xkcd</a></p>
+<p>It’s important that you find what are the crucial points that need to be upgraded in your website to avoid getting lost. In my case the main aspects I want to improve are <strong>time to first paint</strong> and <strong>time to be interactive</strong>. Once you find what are your main aspects try to identify which files are responsible for triggering them, on my case I found out that two bundle files containing all of the page JS and CSS were the files that dictated the website performance if taking in account these two aspects.</p>
+<p>Besides that define which are the most important pages that you want to optimize and focus on those, in my case I’m most interested in improving the performance of webcompat.com, webcompat.com/issues/new and webcompat.co/issues/#.</p>
+<p>Another important thing to decide is whether it’s actually valuable for you to run tests using mobile. Running tests on mobile is a boring task, it’s super slow and they’re not the easiest creatures to handle, so if it’s not relevant for your context (which is rare nowadays) I’d say you could skip it. You can use <a href="https://developers.google.com/web/tools/lighthouse/">Lighthouse</a> to give you an overview about how your website is handling mobile and maybe if you get good results you could also skip the mobile tests. In my case mobile is relevant because it’s where webcompat has the lowest scores when I run this kind of test and also because a substantial part of our traffic comes from mobile.</p>
+<p><img src="/assets/blog/traffic-webcompat.png" alt="traffic" /></p>
+<h2 id="pre-analysis">Pre analysis</h2>
+<p>The <code>push</code> resource has to be used carefully for a couple of reasons, for example it interferes directly with your first paint time, so you have to take watch the size of the files you’re pushing, according to <a href="https://docs.google.com/document/d/1K0NykTXBbbbTlv60t5MyJvXjqKGsCVNYHyLEXIxYMv0/edit#">this</a> article you should <code>push</code> files to fill your idle network time and no more. Using DevTools should make fairly simple to find out how much idle time we have between the time an user makes a request and your website starts responding it. You can also check this <a href="https://stackoverflow.com/questions/667555/how-to-detect-idle-time-in-javascript-elegantly">link</a> to learn how to do it “elegantly”. Here are my results:</p>
+<p><img src="/assets/blog/idle-time.png" alt="idletime" /></p>
+<p>Webcompat’s idle time. Time in ms.</p>
+<p>To get an idea of how HTTP/2 is going to change things I first measured the performance of my website without any change. You can measure this using Speedtest or Devtools. I recommend to use Speedtest because it’ll probably make your life easier, but if you want to run tests on DevTools it’s okay too. Keep in mind that you should create a new profile to do so, so your addons, cookies, etc don’t have any effects on your profiling, this is a very important step since extensions can have a <a href="https://twitter.com/denar90_/statuses/1065712688037277696">profound impact on your performance</a>.</p>
+<p><img src="/assets/blog/wpdefault.png" alt="wpdefault" />
+Webcompat’s performance with no changes. Time in ms.</p>
+<p>Some explanation here: the “/” stands for webcompat.com, the “new” for webcompat.com/issues/new and the “396” for webcompat.com/issues/396, a random issue.</p>
+<h2 id="the-plan">The plan</h2>
+<p><code>Push</code> will send the files you chose for the user before the user browser even requests them and this is the main difference from preloading, but there is a lot of specificities about it and if you’re interested, there is a great <a href="https://dexecure.com/blog/http2-push-vs-http-preload/">article</a> explaining more about them. Because of that we don’t want to push the files every time the user access our page we only want to send them when it’s needed. To do that a good solution is to create a cookie that will indicate to the server if the user needs new information to be pushed or if it doesn;t and the user already has this info cashed on the browser. If you want to learn more about cookies the <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie">MDN</a> page is a nice starting point. Here is an example on how to create a session cookie on nginx:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>server {
+</span><span>[...]
+</span><span>    http2_push_preload on;
+</span><span>    location = / {
+</span><span>        add_header Set-Cookie &quot;session=1&quot;;
+</span><span>        add_header Link $resources;
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span>map $http_cookie $resources {
+</span><span>    &quot;~*session=1&quot; &quot;&quot;;
+</span><span>    default &quot;&lt;/style.css&gt;; as=style; rel=preload, &lt;/image1.jpg&gt;; as=image; rel=preload&quot;;
+</span><span>}
+</span></code></pre>
+<p>Since we know how much idle time we have we can estimate how many files we can <code>push</code>. In my case I’ll be pushing only two huge bundle files that are critical for my performance improvement. But in case my estimates are wrong I’ll also run tests pushing more files than I think the website can handle. I’ll also run some tests using the HTTP/2 server but not pushing anything so I can analyze how much pushing files are improving performance.</p>
+<p>While running the tests I’m interested in looking at four different aspects of the website: time to first paint, speed index, time to start render and time to load all the requests. You can chose the parameters that make more sense to your website. But careful not to take too many things in consideration. Testing a lot of different aspects will not always give you a more accurate answer, in my experience is quite the opposite, testing things that might be unrelated just gave me a lot of work and confusing results.</p>
+<p>To summarize we’ll be testing the following:</p>
+<ul>
+<li>Default HTTP/2 server (not pushing any files);</li>
+<li>Pushing the most crucial files and keeping inside the idle time budget;</li>
+<li>Pushing more files than the available idle time.</li>
+</ul>
+<p>Besides that maybe it might be smart to use <code>preload</code> as a complement to the files that couldn’t be pushed. It depends on your currently situation, in my case I decided it wasn’t a priority but I’ll come back to it later on this post and I’ll try to give you some insights about it.</p>
+<h2 id="the-test-analysis">The test analysis</h2>
+<p>To make the next tests I’ll use Sitespeed! Sitespeed offers you the option to load your configuration as a JSON file, this is the file I used to run my tests:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>{
+</span><span>  &quot;browsertime&quot;: {
+</span><span>    &quot;iterations&quot;: 5,
+</span><span>    &quot;browser&quot;: &quot;BROWSER&quot;
+</span><span>  },
+</span><span>  &quot;utc&quot;: true,
+</span><span>  &quot;outputFolder&quot;: &quot;OUTPUT_FOLDER&quot;
+</span><span>}
+</span></code></pre>
+<p>And this is the command line I used to run tests on my desktop: <code>docker run --shm-size=1g --rm -v &quot;($pwd)&quot;:/sitespeed.io sitespeedio/sitespeed.io:7.73 --config config.json https://staging.webcompat.com</code> .</p>
+<p>I wanted to make this report as accurate as possible so I decided to write a Selenium script to login on my website while I was testing. I recommend you looking in to Selenium and Sitespeed docs if you’re interested in creating something alike. The script is pretty straightforward and here is the one I used:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>module.exports = {
+</span><span>  run(context) {
+</span><span>    return context.runWithDriver((driver) =&gt; {
+</span><span>      return driver.get(&#39;LOGIN_HTML&#39;)
+</span><span>        .then(() =&gt; {          
+</span><span>          const webdriver = context.webdriver;
+</span><span>          const until = webdriver.until;
+</span><span>          const By = webdriver.By;
+</span><span>
+</span><span>          const userName = &#39;USER_LOGIN&#39;;
+</span><span>          const password = &#39;USER_PASSWORD&#39;;
+</span><span>          driver.findElement(By.name(&#39;login&#39;)).sendKeys(userName);
+</span><span>              
+</span><span>          driver.findElement(By.name(&#39;password&#39;))
+</span><span>                             .sendKeys(password);
+</span><span>          const loginButton = driver.findElement(
+</span><span>                                     By.classN* Firefox had a performance consistently worse than Chrome’s on desktop that’s worth an investigation. According to previous tests done on other tools like DevTools and WebPageTest they didn’t used to have such a disparate performance;
+</span><span>
+</span><span>                                    *
+</span><span>                                 In most of the cases just upgrading the server to HTTP/2 doesn&#39;t make much difference. I imagine that most of the performance improvement comes from nginx HPACK;
+</span><span>Even though the time to first paint didn&#39;t improve as much as I expected on the single issue page while I was pushing more than just the bundle files on Chrome mobile the TTI had a huge performance increase;
+</span><span>If comparing the Speed index the performance was worse in all of the devices in the new issue page while I was pushing more than just the bundle files, which means the new issue page have a smaller idle time and I shouldn&#39;t push as many files as I did.ame(&#39;btn-block&#39;));
+</span><span>          loginButton.click();
+</span><span>          return driver.wait(until.elementLocated(
+</span><span>                                   By.id(&#39;body-webcompat&#39;)), 3000);
+</span><span>        });
+</span><span>    })
+</span><span>  }
+</span><span>};
+</span></code></pre>
+<p>While running the tests on my Nexus 5 I’ve used the following command: <code>sitespeed.io --browsertime.chrome.android.package com.android.chrome --preScript login_mobile.js --config config.json https://staging.webcompat.com</code> , you can learn more about how to use your mobile to run tests on Sitespeed reading their docs. Keep in mind that you have to redirect the user from the login page to the page you want to test directly, otherwise the browser will just cache the information from your first loaded page to the page you’re really trying to test. Maybe this issue explains a little better what I mean.</p>
+<p>Using all of the knowledge above we can finally run some tests and analyze the results.</p>
+<p><img src="/assets/blog/2only.png" alt="traffic" />
+Webcompat’s performance without pushing anything. Time in ms.</p>
+<p><img src="/assets/blog/2budgetok.png" alt="traffic" />
+Webcompat’s performance pushing only crucial files. Time in ms.</p>
+<p><img src="/assets/blog/2budgetnotok.png" alt="traffic" />
+Webcompat’s performance pushing more files than idle time supports. Time in ms.</p>
+<p>Seeing this data we can observe a few interesting things:</p>
+<ul>
+<li>Firefox and Chrome mobile have a bigger idle time than Chrome, so these environments benefit more from push . While pushing more than the budget I had estimate was better for Firefox and Chrome mobile it meant a worsen in performance for Chrome desktop;</li>
+<li>Firefox had a performance consistently worse than Chrome’s on desktop that’s worth an investigation. According to <a href="https://psychonautgirl.space/webcompat.html">previous tests</a> done on other tools like DevTools and WebPageTest they didn’t used to have such a disparate performance;</li>
+<li>In most of the cases just upgrading the server to HTTP/2 doesn't make much difference. I imagine that most of the performance improvement comes from nginx <a href="https://blog.cloudflare.com/hpack-the-silent-killer-feature-of-http-2/">HPACK</a>;</li>
+<li>Even though the time to first paint didn't improve as much as I expected on the single issue page while I was pushing more than just the bundle files on Chrome mobile the TTI had a huge performance increase;</li>
+<li>If comparing the Speed index the performance was worse in all of the devices in the new issue page while I was pushing more than just the bundle files, which means the new issue page have a smaller idle time and I shouldn't push as many files as I did.</li>
+</ul>
+<p>If you want to further optimize your website you can try to use preload. I encourage you to read <a href="https://www.keycdn.com/blog/http2-hpack-compression">this article</a> about preloading to find out if it’s worth it for you. Generally if you have any of the following on your website it might be a good idea to use it:</p>
+<ul>
+<li>Fonts referenced by CSS files;</li>
+<li>Hero image which is loaded via background-url in your external CSS file;</li>
+<li>Critical inline CSS/JS.</li>
+</ul>
+<p>Currently the website I'm testing doesn't have any critical inline CSS /JS, nor hero image and our fonts are hosted by third-parties. So I decided I wouldn’t make any changes by the time, since I was currently focusing on the push performance. If you’re planning to do that on your website keep in mind that we’ve used <code>http2_push_preload</code> on nginx and now we can’t preload the files on the server anymore because it’s set to default that all of the preloaded files should be pushed. Instead of using the server configuration file and sending them on headers you’ll have to use the <code>preload</code> tag on HTML files.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Analyzing the data I got to the conclusion that for my website I should use the <code>push</code> resource on a few other files than I had first planned. I learned that using <code>push</code> was specially helpful on single issue pages and on the homepage and that the new issue page has a small idle time and I shouldn’t push as much resources as I push to the rest of the website, or it will start to get in the way of the page rendering.</p>
+<p>I hope this article had helped. Let me know if I missed anything!</p>
+
+
+
+      </div> <!-- span9 -->
+
+      <div class="span3 bs-docs-sidebar">
+      
+        <h1>Search</h1>
+        <form class="form-search">
+          <input id="search" type="text" class="input-large search-query">
+        </form>
+        <div class="search-results">
+          <div class="search-results__items"></div>
+        </div>
+        <p></p>
+        <h1>Categories</h1>
+        <ul class="nav nav-list bs-docs-sidenav">
+          
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/categories/activism">activism</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/categories/journal">journal</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/categories/research">research</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/categories/tutorial">tutorial</a></li>
+          
+        </ul>
+        <p></p>
+        <h1>Tags</h1>
+        <ul class="nav nav-list bs-docs-sidenav">        
+          
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/ai">ai</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/art">art</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/books">books</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/community">community</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/counter-culture">counter-culture</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/cpp">cpp</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/data">data</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/design">design</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/electronics">electronics</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/js">js</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/learning">learning</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/lisp">lisp</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/love">love</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/performance">performance</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/privacy">privacy</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/python">python</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/rust">rust</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/security">security</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/software-tools">software-tools</a></li>
+          
+            <li><a href="https:&#x2F;&#x2F;cyborgdream.github.io/tags/web-dev">web-dev</a></li>
+              
+        </ul>
+      
+      </div>
+
+    </div> <!-- row -->
+  </div> <!-- container navmargin -->
+
+  <footer class="container">
+    <hr class="soften">
+    <p>
+        2023 &copy;
+        <a href="https:&#x2F;&#x2F;cyborgdream.github.io">Mari-chan</a>
+        |
+        
+        <a href="https://twitter.com/mari_meir" target="_blank">Twitter</a>
+        
+        
+        <a href="https://linkedin.com/in/mariana-meireles" target="_blank">Linkedin</a>
+        
+        
+        <a href="https://github.com/marimeireles" target="_blank">GitHub</a>
+        
+        
+        |
+        Built on <a href="https://getzola.org" target="_blank">Zola</a>
+    </p>
+  </footer>
+
+  <script src="https://cyborgdream.github.io/js/jquery.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-386.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-transition.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-alert.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-modal.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-dropdown.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-scrollspy.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-tab.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-tooltip.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-popover.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-button.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-collapse.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-carousel.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-typeahead.js"></script>
+  <script src="https://cyborgdream.github.io/js/bootstrap-affix.js"></script>
+  <script src="https://cyborgdream.github.io/js/zola.386.js"></script>
+  <script src="https://cyborgdream.github.io/js/search.js"></script>
+  <script src="https://cyborgdream.github.io/elasticlunr.min.js"></script>
+  <script src="https://cyborgdream.github.io/search_index.en.js"></script>
+</body>
+</html>
